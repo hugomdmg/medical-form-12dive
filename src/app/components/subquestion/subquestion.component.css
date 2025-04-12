@@ -1,0 +1,11 @@
+.input-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.question-container{
+    width: 45rem;
+    background-color: rgb(233, 233, 233);
+    margin: 0.2rem;
+    padding: 0.2rem;
+}

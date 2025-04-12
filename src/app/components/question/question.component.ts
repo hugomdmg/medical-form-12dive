@@ -10,7 +10,6 @@ import questions from 'src/assets/questions';
 export class QuestionComponent implements OnInit {
 
 
-  @Input() lebel: string = "first"
   @Input() question_text: string = ""
   @Output() eventEmitter = new EventEmitter()
   questions: any[] = []
@@ -19,13 +18,11 @@ export class QuestionComponent implements OnInit {
   answer_no: boolean = false;
 
   ngOnInit(){
-    if(this.lebel == "first"){
       questions.forEach(question => {
         if(question.name == this.question_text){
           this.questions = question.subquestions ? question.subquestions : []
         }
       })
-    }
   }
 
 

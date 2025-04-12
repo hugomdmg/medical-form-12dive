@@ -10,10 +10,9 @@
             <p>{{ 'No' | translate }}</p>
         </div>
     </div>
-    <div *ngIf="answer_yes && lebel == 'first'">
-        <!-- <div> -->
+    <div *ngIf="answer_yes">
         <div *ngFor="let question of questions" class="subquestion">
-            <app-question [question_text]="question.name"></app-question>
+             <app-subquestion [question_text]="question.name"></app-subquestion>
           </div>
     </div>
 </div>

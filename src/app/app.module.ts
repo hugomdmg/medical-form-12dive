@@ -8,6 +8,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { QuestionComponent } from './components/question/question.component';
+import { SubquestionComponent } from './components/subquestion/subquestion.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -17,7 +18,8 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    QuestionComponent
+    QuestionComponent,
+    SubquestionComponent
   ],
   imports: [
     BrowserModule,
