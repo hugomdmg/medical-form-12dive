@@ -1,6 +1,6 @@
 <div class="question-container">
     <div class="input-container">
-        <input type="checkbox" [(ngModel)]="answer" (input)="getAnswer($event)" />
+        <input type="checkbox" [(ngModel)]="answer" (ngModelChange)="getAnswer()" />
         <p>{{ question_text | translate }}</p>
     </div>
 </div>

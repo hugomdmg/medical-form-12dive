@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -6,16 +6,22 @@ import { Input, Output, EventEmitter } from '@angular/core';
   templateUrl: './subquestion.component.html',
   styleUrls: ['./subquestion.component.css']
 })
-export class SubquestionComponent {
+export class SubquestionComponent implements OnInit {
 
-  @Input() question_text: string = "question1_1"
+  @Input() question_text: string = ""
   @Output() eventEmitter = new EventEmitter()
 
   answer: boolean = false;
 
-  getAnswer(event:Event){
-    const value = (event.target as HTMLInputElement).value
-    console.log(value)
+  ngOnInit(){
+  }
+
+  getAnswer() {
+    const value = {
+      name: this.question_text,
+      answer: this.answer
+    }
+    this.eventEmitter.emit(value)
   }
 
 }

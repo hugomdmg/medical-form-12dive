@@ -16,6 +16,6 @@
     <app-question [question_text]="question.name" (eventEmitter)="updateAnswer(question.name, $event)"></app-question>
   </div>
 
-  <button (click)="sendAnswer()">send</button>
+  <app-submit></app-submit>
 
 </div>

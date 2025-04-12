@@ -12,7 +12,7 @@
     </div>
     <div *ngIf="answer_yes">
         <div *ngFor="let question of questions" class="subquestion">
-             <app-subquestion [question_text]="question.name"></app-subquestion>
+             <app-subquestion [question_text]="question.name" (eventEmitter)="updateSubanswer($event)"></app-subquestion>
           </div>
     </div>
 </div>

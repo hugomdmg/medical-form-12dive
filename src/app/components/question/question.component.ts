@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Input, Output, EventEmitter } from '@angular/core';
-import questions from 'src/assets/questions';
+import { QuestionsService } from 'src/app/services/questions.service';
 
 @Component({
   selector: 'app-question',
@@ -17,12 +17,16 @@ export class QuestionComponent implements OnInit {
   answer_yes: boolean = false;
   answer_no: boolean = false;
 
-  ngOnInit(){
+  constructor(private questionsService: QuestionsService) { }
+
+  ngOnInit() {
+    this.questionsService.questions$.subscribe(questions => {
       questions.forEach(question => {
-        if(question.name == this.question_text){
+        if (question.name == this.question_text) {
           this.questions = question.subquestions ? question.subquestions : []
         }
       })
+    });
   }
 
 
@@ -36,6 +40,8 @@ export class QuestionComponent implements OnInit {
     this.eventEmitter.emit(this.answer_yes)
   }
 
-  updateAnswer(){}
+  updateSubanswer(data: any) {
+    this.questionsService.updateAnswer(data.name, data.answer)
+  }
 
 }

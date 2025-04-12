@@ -9,6 +9,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { QuestionComponent } from './components/question/question.component';
 import { SubquestionComponent } from './components/subquestion/subquestion.component';
+import { SubmitComponent } from './components/submit/submit.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -19,7 +20,8 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     QuestionComponent,
-    SubquestionComponent
+    SubquestionComponent,
+    SubmitComponent
   ],
   imports: [
     BrowserModule,

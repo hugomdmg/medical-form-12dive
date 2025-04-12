@@ -1,25 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import questions from 'src/assets/questions';
+import { QuestionsService } from './services/questions.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'medical';
-  questions = questions
+  questions:any = undefined
   
-  constructor(private translate: TranslateService) { }
+  constructor(private translate: TranslateService, private questionsService: QuestionsService) { }
 
-
-  updateAnswer(name:any, answer:any){
-    this.questions.forEach(question => {
-      if(question.name == name){
-        question.answer = answer
+  ngOnInit(): void {
+    this.questionsService.questions$.subscribe(questions => {
+      if(questions){
+        this.questions = questions
       }
     })
+  }
+
+  updateAnswer(name:any, answer:any){
+    this.questionsService.updateAnswer(name, answer)
   }
 
 
