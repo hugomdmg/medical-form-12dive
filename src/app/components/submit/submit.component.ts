@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { QuestionsService } from 'src/app/services/questions.service';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
@@ -8,31 +8,30 @@ import html2canvas from 'html2canvas';
   templateUrl: './submit.component.html',
   styleUrls: ['./submit.component.css']
 })
-export class SubmitComponent {
+export class SubmitComponent implements OnInit {
   title = 'medical';
-  questions: any = undefined
+  questions: any = undefined;
+  signature: string | null = null;
 
   constructor(private questionsService: QuestionsService) { }
 
   ngOnInit(): void {
     this.questionsService.questions$.subscribe(questions => {
       if (questions) {
-        this.questions = questions
+        this.questions = questions;
       }
-    })
+    });
   }
 
+  captureSignature(signature: string): void {
+    this.signature = signature;
+  }
 
   async generatePDFfromHTML() {
-    console.log(this.questions)
     const element: any = document.getElementById('pdf-content');
-    if (!element) { return }
+    if (!element) { return; }
 
-    const canvas = await html2canvas(element, {
-      scale: 3,
-      logging: true
-    });
-
+    const canvas = await html2canvas(element, { scale: 3, logging: true });
     const imgData = canvas.toDataURL('image/png');
 
     const pdf = new jsPDF();

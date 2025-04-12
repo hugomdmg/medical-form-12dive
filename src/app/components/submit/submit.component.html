@@ -1,27 +1,34 @@
-<button (click)="generatePDFfromHTML()">submit</button>
+<app-signature (signatureCaptured)="captureSignature($event)"></app-signature>
 
+<button (click)="generatePDFfromHTML()">Submit</button>
 
 <div id="pdf-content">
     <div *ngFor="let question of questions">
-        <h3>{{question.name | translate}}</h3>
+        <h3>{{ question.name | translate }}</h3>
+
         <div class="answer-container" *ngIf="question.answer">
-            <p class="mark">x</p>Yes
-            <p class="mark"></p>No
+            <p class="mark">x</p> Yes
+            <p class="mark"></p> No
         </div>
         <div class="answer-container" *ngIf="question.answer === false">
-            <p class="mark"></p>Yes
-            <p class="mark">x</p>No
+            <p class="mark"></p> Yes
+            <p class="mark">x</p> No
         </div>
         <div class="answer-container" *ngIf="question.answer === undefined">
-            <p class="mark"></p>Yes
-            <p class="mark"></p>No
+            <p class="mark"></p> Yes
+            <p class="mark"></p> No
         </div>
+
         <div class="ul">
             <div class="li" *ngFor="let subquestion of question.subquestions">
                 <p class="mark" *ngIf="subquestion.answer">x</p>
                 <p class="mark" *ngIf="!subquestion.answer"></p>
-                <p>{{subquestion.name | translate}}</p>
+                <p>{{ subquestion.name | translate }}</p>
             </div>
         </div>
+    </div>
+    <div *ngIf="signature">
+        <h3>Sign:</h3>
+        <img [src]="signature" alt="Firma">
     </div>
 </div>

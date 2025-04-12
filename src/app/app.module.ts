@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { QuestionComponent } from './components/question/question.component';
 import { SubquestionComponent } from './components/subquestion/subquestion.component';
 import { SubmitComponent } from './components/submit/submit.component';
+import { SignatureComponent } from './components/signature/signature.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -21,7 +22,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
     QuestionComponent,
     SubquestionComponent,
-    SubmitComponent
+    SubmitComponent,
+    SignatureComponent
   ],
   imports: [
     BrowserModule,
