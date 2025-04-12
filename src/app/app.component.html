@@ -12,7 +12,7 @@
     <p> {{ 'intro' | translate }} </p>
   </div>
 
-  <div *ngFor="let question of questions">
+  <div *ngFor="let question of questions" class="question">
     <app-question [question_text]="question.name" (eventEmitter)="updateAnswer(question.name, $event)"></app-question>
   </div>
 

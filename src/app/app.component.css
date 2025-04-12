@@ -44,3 +44,12 @@ img {
     flex-direction: row;
 }
 
+
+.question {
+    border-radius: 0.3rem;
+    padding: 1rem;
+    background-color: white;
+    margin: 1rem;
+    width: 46rem;
+}
+

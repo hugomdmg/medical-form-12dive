@@ -1,20 +1,33 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Input, Output, EventEmitter } from '@angular/core';
+import questions from 'src/assets/questions';
 
 @Component({
   selector: 'app-question',
   templateUrl: './question.component.html',
   styleUrls: ['./question.component.css']
 })
-export class QuestionComponent {
+export class QuestionComponent implements OnInit {
 
 
-  @Input() question: string = ""
+  @Input() lebel: string = "first"
   @Input() question_text: string = ""
   @Output() eventEmitter = new EventEmitter()
+  questions: any[] = []
 
   answer_yes: boolean = false;
   answer_no: boolean = false;
+
+  ngOnInit(){
+    if(this.lebel == "first"){
+      questions.forEach(question => {
+        if(question.name == this.question_text){
+          this.questions = question.subquestions ? question.subquestions : []
+        }
+      })
+    }
+  }
+
 
   toggleAnswer(selected: string): void {
     if (selected === 'yes') {
@@ -25,5 +38,7 @@ export class QuestionComponent {
 
     this.eventEmitter.emit(this.answer_yes)
   }
+
+  updateAnswer(){}
 
 }

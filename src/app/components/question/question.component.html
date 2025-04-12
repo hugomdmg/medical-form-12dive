@@ -10,6 +10,10 @@
             <p>{{ 'No' | translate }}</p>
         </div>
     </div>
-    <p *ngIf="answer_yes">{{'You selected Yes' | translate}}</p>
-    <p *ngIf="answer_no">{{'You selected No' | translate}}</p>
+    <div *ngIf="answer_yes && lebel == 'first'">
+        <!-- <div> -->
+        <div *ngFor="let question of questions" class="subquestion">
+            <app-question [question_text]="question.name"></app-question>
+          </div>
+    </div>
 </div>

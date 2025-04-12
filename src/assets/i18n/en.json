@@ -9,7 +9,47 @@
     "question7": "7. I am currently undergoing treatment (or have required treatment within the last five years) for psychological problems, personality disorder, panic attacks, or an addiction to drugs or alcohol; or, I have been diagnosed with a learning or developmental disability.",
     "question8": "8. I have had back problems, hernia, ulcers, or diabetes.",
     "question9": "9. I have had stomach or intestine problems, including recent diarrhea.",
-    "question10": "10. I am taking prescription medications (with the exception of birth control or anti-malarial drugs other than mefloquine (Lariam)."
+    "question10": "10. I am taking prescription medications (with the exception of birth control or anti-malarial drugs other than mefloquine (Lariam).",
+    
+    "question1_1": "Chest surgery, heart surgery, heart valve surgery, an implantable medical device (eg, stent, pacemaker, neurostimulator), pneumothorax, and/or chronic lung disease.",
+    "question1_2": "Asthma, wheezing, severe allergies, hay fever or congested airways within the last 12 months that limits my physical activity/exercise.",
+    "question1_3": "A problem or illness involving my heart such as: angina, chest pain on exertion, heart failure, immersion pulmonary edema, heart attack or stroke, OR am taking medication for any heart condition.",
+    "question1_4": "Recurrent bronchitis and currently coughing within the past 12 months, OR have been diagnosed with emphysema.",
+    "question1_5": "A diagnosis of COVID-19.",
+
+    "question2_1": "I currently smoke or inhale nicotine by other means.",
+    "question2_2": "I have a high cholesterol level.",
+    "question2_3": "I have high blood pressure.",
+    "question2_4": "I have had a close blood relative die suddenly or of cardiac disease or stroke before the age of 50, OR have a family history of heart disease before age 50 (including abnormal heart rhythms, coronary artery disease or cardiomyopathy).",
+
+    "question4_1": "Sinus surgery within the last 6 months.",
+    "question4_2": "Ear disease or ear surgery, hearing loss, or problems with balance.",
+    "question4_3": "Recurrent sinusitis within the past 12 months.",
+    "question4_4": "Eye surgery within the past 3 months",
+
+    "question6_1": "Head injury with loss of consciousness within the past 5 years",
+    "question6_2": "Persistent neurologic injury or disease",
+    "question6_3": "Recurring migraine headaches within the past 12 months, or take medications to prevent them.",
+    "question6_4": "Blackouts or fainting (full/partial loss of consciousness) within the last 5 years",
+    "question6_5": "Epilepsy, seizures, or convulsions, OR take medications to prevent them.",
+
+    "question7_1": "Behavioral health, mental or psychological problems requiring medical/psychiatric treatment",
+    "question7_2": "Major depression, suicidal ideation, panic attacks, uncontrolled bipolar disorder requiring medication/psychiatric treatment.",
+    "question7_3": "Been diagnosed with a mental health condition or a learning/developmental disorder that requires ongoing care or special accommodation.",
+    "question7_4": "An addiction to drugs or alcohol requiring treatment within the last 5 years.",
+
+    "question8_1": "Recurrent back problems in the last 6 months that limit my everyday activity",
+    "question8_2": "Back or spinal surgery within the last 12 months",
+    "question8_3": "Diabetes, either drug or diet controlled, OR gestational diabetes within the last 12 months.",
+    "question8_4": "An uncorrected hernia that limits my physical abilities",
+    "question8_5": "Active or untreated ulcers, problem wounds, or ulcer surgery within the last 6 months",
+
+    "question9_1": "Ostomy surgery and do not have medical clearance to swim or engage in physical activity.",
+    "question9_2": "Dehydration requiring medical intervention within the last 7 days.",
+    "question9_3": "Active or untreated stomach or intestinal ulcers or ulcer surgery within the last 6 months.",
+    "question9_4": "Frequent heartburn, regurgitation, or gastroesophageal reflux disease (GERD).",
+    "question9_5": "Active or uncontrolled ulcerative colitis or Crohn’s disease.",
+    "question9_6": "Bariatric surgery within the last 12 months"
 
 
 }
