@@ -1,0 +1,15 @@
+{
+    "intro": "La plongée sous-marine récréative et l'apnée nécessitent une bonne santé physique et mentale. Certaines conditions médicales peuvent représenter un danger lors de la plongée, comme indiqué ci-dessous. Les personnes qui présentent ou sont prédisposées à l'une de ces conditions doivent être évaluées par un médecin. Ce questionnaire médical pour les participants à la plongée sert de base pour déterminer si vous devez consulter un médecin. Si vous avez des préoccupations concernant votre aptitude à plonger qui ne sont pas mentionnées dans ce formulaire, consultez votre médecin avant de plonger. Si vous vous sentez malade, évitez de plonger. Si vous pensez être porteur d'une maladie contagieuse, protégez-vous et protégez les autres en ne participant pas à des formations ou activités de plongée. Les références à la « plongée » dans ce formulaire incluent à la fois la plongée sous-marine récréative et l'apnée. Ce formulaire est principalement conçu comme un premier dépistage médical pour les nouveaux plongeurs, mais convient également aux plongeurs suivant une formation continue. Pour votre sécurité et celle des autres plongeurs, répondez honnêtement à toutes les questions.",
+    
+    "question1": "1. J’ai eu des problèmes avec mes poumons, ma respiration, mon cœur et/ou mon sang affectant mes performances physiques ou mentales normales.",
+    "question2": "2. J’ai plus de 45 ans.",
+    "question3": "3. J’ai du mal à effectuer un exercice modéré (par exemple, marcher 1,6 kilomètre/une mile en 14 minutes ou nager 200 mètres/yardes sans repos), OU je n’ai pas pu participer à une activité physique normale pour des raisons de santé ou de condition physique au cours des 12 derniers mois.",
+    "question4": "4. J’ai eu des problèmes avec mes yeux, mes oreilles ou mes voies nasales/sinus.",
+    "question5": "5. J’ai subi une intervention chirurgicale au cours des 12 derniers mois, OU j’ai des problèmes persistants liés à une chirurgie antérieure.",
+    "question6": "6. J’ai perdu connaissance, eu des migraines, des crises, un AVC, une blessure importante à la tête ou je souffre de lésions ou maladies neurologiques persistantes.",
+    "question7": "7. Je suis actuellement sous traitement (ou j’ai nécessité un traitement au cours des cinq dernières années) pour des problèmes psychologiques, un trouble de la personnalité, des attaques de panique, ou une addiction à la drogue ou à l’alcool ; ou on m’a diagnostiqué un trouble de l’apprentissage ou du développement.",
+    "question8": "8. J’ai eu des problèmes de dos, une hernie, des ulcères ou du diabète.",
+    "question9": "9. J’ai eu des problèmes d’estomac ou intestinaux, y compris une diarrhée récente.",
+    "question10": "10. Je prends des médicaments sur ordonnance (à l’exception des contraceptifs ou des médicaments antipaludiques autres que la méfloquine (Lariam))."
+  }
+  

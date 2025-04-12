@@ -1,0 +1,15 @@
+{
+    "intro": "Rekreatives Tauchen mit Atemgerät (Scuba) und Freitauchen erfordern eine gute körperliche und geistige Gesundheit. Es gibt einige medizinische Bedingungen, die beim Tauchen gefährlich sein können und unten aufgeführt sind. Personen, die eine dieser Bedingungen haben oder dazu neigen, sollten von einem Arzt untersucht werden. Dieser medizinische Fragebogen für Taucher dient als Grundlage, um festzustellen, ob Sie eine solche ärztliche Untersuchung benötigen. Wenn Sie Bedenken hinsichtlich Ihrer Tauchtauglichkeit haben, die in diesem Formular nicht erwähnt werden, konsultieren Sie bitte vor dem Tauchen Ihren Arzt. Wenn Sie sich krank fühlen, vermeiden Sie das Tauchen. Wenn Sie glauben, an einer ansteckenden Krankheit zu leiden, schützen Sie sich und andere, indem Sie nicht an Tauchkursen oder Tauchaktivitäten teilnehmen. Die in diesem Formular erwähnten Begriffe „Tauchen“ beziehen sich sowohl auf das rekreative Gerätetauchen als auch auf das Freitauchen. Dieses Formular ist hauptsächlich als erste medizinische Untersuchung für neue Taucher gedacht, eignet sich jedoch auch für Taucher, die eine Weiterbildung machen. Zu Ihrer eigenen Sicherheit und der Sicherheit Ihrer Tauchpartner beantworten Sie bitte alle Fragen ehrlich.",
+    
+    "question1": "1. Ich hatte Probleme mit meinen Lungen, der Atmung, dem Herzen und/oder dem Blut, die meine normale körperliche oder geistige Leistungsfähigkeit beeinträchtigt haben.",
+    "question2": "2. Ich bin über 45 Jahre alt.",
+    "question3": "3. Es fällt mir schwer, mäßige körperliche Anstrengung durchzuführen (z. B. 1,6 Kilometer/eine Meile in 14 Minuten zu gehen oder 200 Meter/Yards ohne Pause zu schwimmen), ODER ich konnte in den letzten 12 Monaten aus Fitness- oder Gesundheitsgründen nicht an normaler körperlicher Aktivität teilnehmen.",
+    "question4": "4. Ich hatte Probleme mit meinen Augen, Ohren oder Nasengängen/Nebenhöhlen.",
+    "question5": "5. Ich wurde in den letzten 12 Monaten operiert ODER habe anhaltende Probleme aufgrund einer früheren Operation.",
+    "question6": "6. Ich habe das Bewusstsein verloren, hatte Migräne, Krampfanfälle, einen Schlaganfall, eine schwere Kopfverletzung oder leide an einer anhaltenden neurologischen Schädigung oder Krankheit.",
+    "question7": "7. Ich befinde mich derzeit in Behandlung (oder war in den letzten fünf Jahren in Behandlung) wegen psychischer Probleme, Persönlichkeitsstörungen, Panikattacken oder Sucht nach Drogen oder Alkohol; oder bei mir wurde eine Lern- oder Entwicklungsstörung diagnostiziert.",
+    "question8": "8. Ich hatte Rückenprobleme, einen Leistenbruch, Magengeschwüre oder Diabetes.",
+    "question9": "9. Ich hatte Magen- oder Darmprobleme, einschließlich kürzlichem Durchfall.",
+    "question10": "10. Ich nehme verschreibungspflichtige Medikamente ein (mit Ausnahme von Verhütungsmitteln oder Malariamedikamenten außer Mefloquin (Lariam))."
+  }
+  
