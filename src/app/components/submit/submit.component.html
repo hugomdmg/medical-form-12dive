@@ -1,93 +1,27 @@
-
 <button (click)="generatePDFfromHTML()">submit</button>
 
 
 <div id="pdf-content">
-    <div class="question-block">
-      <h3>{{ 'question1' | translate }}</h3>
-      <ul>
-        <li>{{ 'question1_1' | translate }}</li>
-        <li>{{ 'question1_2' | translate }}</li>
-        <li>{{ 'question1_3' | translate }}</li>
-        <li>{{ 'question1_4' | translate }}</li>
-        <li>{{ 'question1_5' | translate }}</li>
-      </ul>
+    <div *ngFor="let question of questions">
+        <h3>{{question.name | translate}}</h3>
+        <div class="answer-container" *ngIf="question.answer">
+            <p class="mark">x</p>Yes
+            <p class="mark"></p>No
+        </div>
+        <div class="answer-container" *ngIf="question.answer === false">
+            <p class="mark"></p>Yes
+            <p class="mark">x</p>No
+        </div>
+        <div class="answer-container" *ngIf="question.answer === undefined">
+            <p class="mark"></p>Yes
+            <p class="mark"></p>No
+        </div>
+        <div class="ul">
+            <div class="li" *ngFor="let subquestion of question.subquestions">
+                <p class="mark" *ngIf="subquestion.answer">x</p>
+                <p class="mark" *ngIf="!subquestion.answer"></p>
+                <p>{{subquestion.name | translate}}</p>
+            </div>
+        </div>
     </div>
-  
-    <div class="question-block">
-      <h3>{{ 'question2' | translate }}</h3>
-      <ul>
-        <li>{{ 'question2_1' | translate }}</li>
-        <li>{{ 'question2_2' | translate }}</li>
-        <li>{{ 'question2_3' | translate }}</li>
-        <li>{{ 'question2_4' | translate }}</li>
-      </ul>
-    </div>
-  
-    <div class="question-block">
-      <h3>{{ 'question3' | translate }}</h3>
-    </div>
-  
-    <div class="question-block">
-      <h3>{{ 'question4' | translate }}</h3>
-      <ul>
-        <li>{{ 'question4_1' | translate }}</li>
-        <li>{{ 'question4_2' | translate }}</li>
-        <li>{{ 'question4_3' | translate }}</li>
-        <li>{{ 'question4_4' | translate }}</li>
-      </ul>
-    </div>
-  
-    <div class="question-block">
-      <h3>{{ 'question5' | translate }}</h3>
-    </div>
-  
-    <div class="question-block">
-      <h3>{{ 'question6' | translate }}</h3>
-      <ul>
-        <li>{{ 'question6_1' | translate }}</li>
-        <li>{{ 'question6_2' | translate }}</li>
-        <li>{{ 'question6_3' | translate }}</li>
-        <li>{{ 'question6_4' | translate }}</li>
-        <li>{{ 'question6_5' | translate }}</li>
-      </ul>
-    </div>
-  
-    <div class="question-block">
-      <h3>{{ 'question7' | translate }}</h3>
-      <ul>
-        <li>{{ 'question7_1' | translate }}</li>
-        <li>{{ 'question7_2' | translate }}</li>
-        <li>{{ 'question7_3' | translate }}</li>
-        <li>{{ 'question7_4' | translate }}</li>
-      </ul>
-    </div>
-  
-    <div class="question-block">
-      <h3>{{ 'question8' | translate }}</h3>
-      <ul>
-        <li>{{ 'question8_1' | translate }}</li>
-        <li>{{ 'question8_2' | translate }}</li>
-        <li>{{ 'question8_3' | translate }}</li>
-        <li>{{ 'question8_4' | translate }}</li>
-        <li>{{ 'question8_5' | translate }}</li>
-      </ul>
-    </div>
-  
-    <div class="question-block">
-      <h3>{{ 'question9' | translate }}</h3>
-      <ul>
-        <li>{{ 'question9_1' | translate }}</li>
-        <li>{{ 'question9_2' | translate }}</li>
-        <li>{{ 'question9_3' | translate }}</li>
-        <li>{{ 'question9_4' | translate }}</li>
-        <li>{{ 'question9_5' | translate }}</li>
-        <li>{{ 'question9_6' | translate }}</li>
-      </ul>
-    </div>
-  
-    <div class="question-block">
-      <h3>{{ 'question10' | translate }}</h3>
-    </div>
-  </div>
-  
+</div>
