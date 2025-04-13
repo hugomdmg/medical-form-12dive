@@ -1,5 +1,11 @@
 body {
     display: flex;
-    justify-content: center;
     background-color: rgb(92, 202, 230);
+}
+
+@media (min-width: 768px) {
+    body {
+        display: flex;
+        justify-content: center;
+    }
 }
