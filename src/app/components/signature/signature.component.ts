@@ -25,6 +25,10 @@ export class SignatureComponent implements AfterViewInit {
       this.saveSignature();
     });
 
+    canvas.addEventListener('touchmove', (event: TouchEvent)=>{
+      this.saveSignature()
+    })
+
   }
 
   clearSignature(): void {
