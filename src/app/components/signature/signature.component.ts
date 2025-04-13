@@ -17,8 +17,8 @@ export class SignatureComponent implements AfterViewInit {
     const canvas = this.signatureCanvas.nativeElement;
     this.signaturePad = new SignaturePad(canvas, {
       penColor: 'black',
-      minWidth: 2,
-      maxWidth: 5
+      minWidth: 0.5,
+      maxWidth: 1
     });
 
     canvas.addEventListener('click', (event: MouseEvent) => {
