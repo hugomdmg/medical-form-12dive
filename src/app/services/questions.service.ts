@@ -6,9 +6,16 @@ import questions from 'src/assets/questions';
   providedIn: 'root'
 })
 export class QuestionsService {
+  name = ""
+  private nameSource = new BehaviorSubject<string>(this.name);
   private questionsSource = new BehaviorSubject<any[]>(questions);
 
+  name$ = this.nameSource.asObservable()
   questions$ = this.questionsSource.asObservable();
+
+  updateName(name: string) {
+    this.nameSource.next(name)
+  }
 
   updateAnswer(name: string, answer: boolean) {
     const current = this.questionsSource.value;

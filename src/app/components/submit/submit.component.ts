@@ -13,6 +13,8 @@ export class SubmitComponent implements OnInit {
   questions: any = undefined;
   signature: string | null = null;
   creating = false
+  name = ""
+  date = new Date().toISOString().split('T')[0]
 
   constructor(private questionsService: QuestionsService) { }
 
@@ -22,6 +24,9 @@ export class SubmitComponent implements OnInit {
         this.questions = questions;
       }
     });
+    this.questionsService.name$.subscribe(name => {
+      this.name = name
+    })
   }
 
   captureSignature(signature: string): void {

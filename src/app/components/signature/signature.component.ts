@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild, Output, EventEmitter } from '@angular/core';
+import { Component, ElementRef, ViewChild, Output, EventEmitter, AfterViewInit } from '@angular/core';
 import SignaturePad from 'signature_pad';
 
 @Component({
@@ -6,21 +6,25 @@ import SignaturePad from 'signature_pad';
   templateUrl: './signature.component.html',
   styleUrls: ['./signature.component.css']
 })
-export class SignatureComponent implements OnInit {
+export class SignatureComponent implements AfterViewInit {
   @ViewChild('signatureCanvas', { static: true }) signatureCanvas!: ElementRef;
   @Output() signatureCaptured = new EventEmitter<string>();
 
   signaturePad!: SignaturePad;
 
   constructor() { }
-
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     const canvas = this.signatureCanvas.nativeElement;
-    this.signaturePad = new SignaturePad(canvas);
+    this.signaturePad = new SignaturePad(canvas, {
+      penColor: 'black',
+      minWidth: 2,
+      maxWidth: 5
+    });
 
-    this.signaturePad.penColor = 'black';
-    this.signaturePad.minWidth = 2;
-    this.signaturePad.maxWidth = 5;
+    canvas.addEventListener('click', (event: MouseEvent) => {
+      this.saveSignature();
+    });
+
   }
 
   clearSignature(): void {
@@ -33,4 +37,5 @@ export class SignatureComponent implements OnInit {
       this.signatureCaptured.emit(signatureData);
     }
   }
+
 }
