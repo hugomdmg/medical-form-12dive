@@ -10,7 +10,8 @@
     <h1>{{'title' | translate}}</h1>
 
     <p> {{ 'intro' | translate }} </p>
-    <p>{{'name'| translate}}</p>
+    <p [innerHTML]="'title_2' | translate"></p>
+    <p>{{'name' | translate}}</p>
     <input id="name-input" type="text" (input)="updateName($event)">
   </div>
 
