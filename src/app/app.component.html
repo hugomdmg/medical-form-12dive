@@ -8,7 +8,10 @@
   </div>
 
   <div class="question-container">
-    <h1>{{'title' | translate}}</h1>
+    <div id="title-container">
+      <img id="logo" src="../assets/img/12divelogo.jpeg" alt="">
+      <h1>{{'title' | translate}}</h1>
+    </div>
 
     <p> {{ 'intro' | translate }} </p>
     <p [innerHTML]="'title_2' | translate"></p>
