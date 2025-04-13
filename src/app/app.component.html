@@ -12,7 +12,6 @@
     <p> {{ 'intro' | translate }} </p>
     <p>{{'name'| translate}}</p>
     <input id="name-input" type="text" (input)="updateName($event)">
-    <p>{{name}}</p>
   </div>
 
   <div *ngFor="let question of questions" class="question">
