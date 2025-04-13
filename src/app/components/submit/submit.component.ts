@@ -56,29 +56,25 @@ export class SubmitComponent implements OnInit {
       this.creating = false
     }
   }
-
   checkComplet(): boolean {
-    let response = true
-    this.questions.forEach((element: any) => {
-      if (element.answer === undefined) {
-        this.show_alert = true
-        response = false
-      } else {
-        this.show_alert = false
-      }
-    });
+    this.show_alert = false;
+    this.show_alert_name = false;
+    this.show_alert_signature = false;
+
+    const unanswered = this.questions.some((q: any) => q.answer === undefined);
+    if (unanswered) {
+      this.show_alert = true;
+    }
+
     if (!this.name) {
-      response = false
-      this.show_alert_name = true
-    } else {
-      this.show_alert_name = false
+      this.show_alert_name = true;
     }
-    if(!this.signature){
-      response = false
-      this.show_alert_signature = true
-    }else{
-      this.show_alert_signature = false
+
+    if (!this.signature) {
+      this.show_alert_signature = true;
     }
-    return response
+
+    return !(this.show_alert || this.show_alert_name || this.show_alert_signature);
   }
+
 }
