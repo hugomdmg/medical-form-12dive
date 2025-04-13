@@ -10,6 +10,8 @@
   "wait": "préparation du PDF...",
   "alert": "vous devez répondre à toutes les questions",
   "alert_name": "le nom est manquant",
+  "alert_signature": "signature manquante",
+  "signed": "signé",
   "question1": "1. J’ai eu des problèmes avec mes poumons, ma respiration, mon cœur et/ou mon sang affectant mes performances physiques ou mentales normales.",
   "question2": "2. J’ai plus de 45 ans.",
   "question3": "3. J’ai du mal à effectuer un exercice modéré (par exemple, marcher 1,6 kilomètre/une mile en 14 minutes ou nager 200 mètres/yardes sans repos), OU je n’ai pas pu participer à une activité physique normale pour des raisons de santé ou de condition physique au cours des 12 derniers mois.",

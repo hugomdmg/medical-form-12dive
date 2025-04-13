@@ -10,6 +10,8 @@
   "wait": "PDF wird vorbereitet...",
   "alert": "Sie müssen alle Fragen beantworten",
   "alert_name": "Name fehlt",
+  "alert_signature": "fehlende Signatur",
+  "signed": "signiert",
   "question1": "1. Ich hatte Probleme mit meinen Lungen, der Atmung, dem Herzen und/oder dem Blut, die meine normale körperliche oder geistige Leistungsfähigkeit beeinträchtigt haben.",
   "question2": "2. Ich bin über 45 Jahre alt.",
   "question3": "3. Es fällt mir schwer, mäßige körperliche Anstrengung durchzuführen (z. B. 1,6 Kilometer/eine Meile in 14 Minuten zu gehen oder 200 Meter/Yards ohne Pause zu schwimmen), ODER ich konnte in den letzten 12 Monaten aus Fitness- oder Gesundheitsgründen nicht an normaler körperlicher Aktivität teilnehmen.",

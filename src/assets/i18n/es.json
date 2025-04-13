@@ -10,6 +10,8 @@
     "wait": "preparando pdf...",
     "alert": "debes responder todas las preguntas",
     "alert_name": "falta el nombre",
+    "alert_signature": "firma faltante",
+    "signed": "firmado",
     "question1": "1. He tenido problemas con mis pulmones, respiración, corazón y/o sangre que afectan mi rendimiento físico o mental normal.",
     "question2": "2. Tengo más de 45 años de edad.",
     "question3": "3. Me cuesta realizar ejercicio moderado (por ejemplo, caminar 1.6 kilómetros/una milla en 14 minutos o nadar 200 metros/yardas sin descansar), O no he podido participar en una actividad física normal por razones de condición física o salud en los últimos 12 meses.",

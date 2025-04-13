@@ -10,6 +10,8 @@
     "wait": "preparing PDF...",
     "alert": "you must answer all the questions",
     "alert_name": "name is missing",
+    "alert_signature": "missing signature",
+    "signed": "signed",
     "question1": "1. I have had problems with my lungs, breathing, heart and/or blood affecting my normal physical or mental performance.",
     "question2": "2. I am over 45 years of age.",
     "question3": "3. I struggle to perform moderate exercise (for example, walk 1.6 kilometer/one mile in 14 minutes or swim 200 meters/yards without resting), OR I have been unable to participate in a normal physical activity due to fitness or health reasons within the past 12 months.",
