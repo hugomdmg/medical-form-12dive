@@ -1,7 +1,11 @@
 <app-signature (signatureCaptured)="captureSignature($event)"></app-signature>
 
-<p *ngIf="creating">{{'wait' | translate}}</p>
-<button (click)="generatePDFfromHTML()">{{'submit'|translate}}</button>
+<div class="submit-container">
+    <p class="alert" *ngIf="creating">{{'wait' | translate}}</p>
+    <p class="alert" *ngIf="show_alert">{{'alert' | translate}}</p>
+    <p class="alert" *ngIf="show_alert_name">{{'alert_name' | translate}}</p>
+    <button class="submit" (click)="generatePDFfromHTML()">{{'submit'|translate}}</button>
+</div>
 
 <div id="pdf-content">
     <div *ngFor="let question of questions">
@@ -30,6 +34,6 @@
     </div>
     <div>
         <h3>Sign: {{name}}, {{date}}</h3>
-        <img [src]="signature" alt="Firma">
+        <img [src]="signature" alt="sign">
     </div>
 </div>

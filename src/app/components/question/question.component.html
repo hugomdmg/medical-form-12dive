@@ -11,7 +11,7 @@
         </div>
     </div>
     <div *ngIf="answer_yes">
-        <p>I have/had:</p>
+        <p *ngIf="questions">I have/had:</p>
         <div *ngFor="let question of questions">
             <app-subquestion [question_text]="question.name" (eventEmitter)="updateSubanswer($event)"></app-subquestion>
         </div>
