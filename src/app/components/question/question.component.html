@@ -3,14 +3,15 @@
     <div>
         <div class="input-container">
             <input type="checkbox" [(ngModel)]="answer_yes" (change)="toggleAnswer('yes')" />
-            <p>{{ 'Yes' | translate }}</p>
+            <p>{{ 'yes' | translate }}</p>
         </div>
         <div class="input-container">
             <input type="checkbox" [(ngModel)]="answer_no" (change)="toggleAnswer('no')" />
-            <p>{{ 'No' | translate }}</p>
+            <p>{{ 'no' | translate }}</p>
         </div>
     </div>
     <div *ngIf="answer_yes">
+        <p>I have/had:</p>
         <div *ngFor="let question of questions">
             <app-subquestion [question_text]="question.name" (eventEmitter)="updateSubanswer($event)"></app-subquestion>
         </div>

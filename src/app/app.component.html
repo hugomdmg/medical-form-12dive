@@ -10,10 +10,16 @@
     <h1>Diver Medical | Participant Questionnaire</h1>
 
     <p> {{ 'intro' | translate }} </p>
+    <p>{{'name'| translate}}</p>
+    <input type="text">
   </div>
 
   <div *ngFor="let question of questions" class="question">
     <app-question [question_text]="question.name" (eventEmitter)="updateAnswer(question.name, $event)"></app-question>
+  </div>
+
+  <div class="question-container">
+    <p [innerHTML]="'final_text' | translate"></p>
   </div>
 
   <app-submit></app-submit>

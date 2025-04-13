@@ -1,22 +1,23 @@
 <app-signature (signatureCaptured)="captureSignature($event)"></app-signature>
 
-<button (click)="generatePDFfromHTML()">Submit</button>
+<p *ngIf="creating">{{'wait' | translate}}</p>
+<button (click)="generatePDFfromHTML()">{{'submit'|translate}}</button>
 
 <div id="pdf-content">
     <div *ngFor="let question of questions">
         <h3>{{ question.name | translate }}</h3>
 
         <div class="answer-container" *ngIf="question.answer">
-            <p class="mark">x</p> Yes
-            <p class="mark"></p> No
+            <p class="mark">x</p> {{'yes' | translate}}
+            <p class="mark"></p> {{'no' | translate}}
         </div>
         <div class="answer-container" *ngIf="question.answer === false">
-            <p class="mark"></p> Yes
-            <p class="mark">x</p> No
+            <p class="mark"></p> {{'yes' | translate}}
+            <p class="mark">x</p> {{'no' | translate}}
         </div>
         <div class="answer-container" *ngIf="question.answer === undefined">
-            <p class="mark"></p> Yes
-            <p class="mark"></p> No
+            <p class="mark"></p> {{'yes' | translate}}
+            <p class="mark"></p> {{'no' | translate}}
         </div>
 
         <div class="ul">

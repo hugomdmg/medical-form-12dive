@@ -12,6 +12,7 @@ export class SubmitComponent implements OnInit {
   title = 'medical';
   questions: any = undefined;
   signature: string | null = null;
+  creating = false
 
   constructor(private questionsService: QuestionsService) { }
 
@@ -28,6 +29,7 @@ export class SubmitComponent implements OnInit {
   }
 
   async generatePDFfromHTML() {
+    this.creating = true
     const element: any = document.getElementById('pdf-content');
     if (!element) { return; }
 
@@ -42,5 +44,6 @@ export class SubmitComponent implements OnInit {
     pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
 
     pdf.save('medical_form.pdf');
+    this.creating = false
   }
 }
