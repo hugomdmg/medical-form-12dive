@@ -21,7 +21,7 @@ img {
 
 #languages-container button {
     border: none;
-    background-color: rgb(92, 202, 230);
+    background: transparent;
     margin: 0.1rem;
     padding: 0.2rem;
     width: 2rem;
@@ -39,6 +39,7 @@ img {
     background-color: white;
     margin: 1rem;
     width: 100%;
+    opacity: 0.8;
 }
 
 .input-container {
@@ -53,6 +54,7 @@ img {
     background-color: white;
     margin: 1rem;
     width: 100%;
+    opacity: 0.8;
 }
 
 #name-input {

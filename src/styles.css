@@ -1,6 +1,15 @@
 body {
     display: flex;
-    background-color: rgb(92, 202, 230);
+    /* background-color: rgb(92, 202, 230); */
+    background-image: url('assets/img/dive2.jpg'); 
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;            /* Cubre todo el fondo */
+
+
 }
 
 @media (min-width: 768px) {
