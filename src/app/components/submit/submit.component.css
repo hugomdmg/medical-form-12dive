@@ -66,3 +66,12 @@ img {
     color: red;
     font-weight: bold;
 }
+
+#alerts-container {
+    background-color: white;
+    margin: 0.4rem;
+    padding: 0.4rem;
+    width: 100%;
+    opacity: 0.8;
+    border-radius: 0.3rem;
+}

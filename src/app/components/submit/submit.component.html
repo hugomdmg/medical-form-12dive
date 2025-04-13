@@ -1,10 +1,12 @@
 <app-signature (signatureCaptured)="captureSignature($event)"></app-signature>
 
 <div class="submit-container">
-    <p class="alert" *ngIf="creating">{{'wait' | translate}}</p>
-    <p class="alert" *ngIf="show_alert">{{'alert' | translate}}</p>
-    <p class="alert" *ngIf="show_alert_name">{{'alert_name' | translate}}</p>
-    <p class="alert" *ngIf="show_alert_signature">{{'alert_signature' | translate}}</p>
+    <div id="alerts-container" *ngIf="show_alert_signature || creating || show_alert || show_alert_name">
+        <p class="alert" *ngIf="creating">{{'wait' | translate}}</p>
+        <p class="alert" *ngIf="show_alert">{{'alert' | translate}}</p>
+        <p class="alert" *ngIf="show_alert_name">{{'alert_name' | translate}}</p>
+        <p class="alert" *ngIf="show_alert_signature">{{'alert_signature' | translate}}</p>
+    </div>
     <button class="submit" (click)="generatePDFfromHTML()">{{'submit'|translate}}</button>
 </div>
 
