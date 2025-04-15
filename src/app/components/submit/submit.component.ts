@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { QuestionsService } from 'src/app/services/questions.service';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
-import { saveAs } from 'file-saver';
 
 
 @Component({
@@ -37,71 +36,36 @@ export class SubmitComponent implements OnInit {
   captureSignature(signature: string): void {
     this.signature = signature;
   }
-
+  
   async generatePDFfromHTML() {
     if (!this.checkComplet()) return;
-  
-    this.creating = true;
-    const element = document.getElementById('pdf-content');
-    if (!element) return;
-  
-    const canvas = await html2canvas(element, { scale: 0.9 });
-    const imgHeight = canvas.height;
-    const imgWidth = canvas.width;
-  
-    const pdf = new jsPDF('p', 'mm', 'a4');
-    const pdfWidth = pdf.internal.pageSize.getWidth();
-    const pdfHeight = pdf.internal.pageSize.getHeight();
-  
-    const ratio = pdfWidth / imgWidth;
-    const pageHeightPx = pdfHeight / ratio;
-  
-    let position = 0;
-    let page = 0;
-  
-    while (position < imgHeight) {
-      const pageCanvas = document.createElement('canvas');
-      pageCanvas.width = imgWidth;
-      pageCanvas.height = Math.min(pageHeightPx, imgHeight - position);
-  
-      const pageCtx = pageCanvas.getContext('2d');
-      if (pageCtx) {
-        pageCtx.drawImage(
-          canvas,
-          0,
-          position,
-          imgWidth,
-          pageCanvas.height,
-          0,
-          0,
-          imgWidth,
-          pageCanvas.height
-        );
-  
-        const imgData = pageCanvas.toDataURL('image/png');
-        if (page > 0) pdf.addPage();
-        pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, (pageCanvas.height * pdfWidth) / imgWidth);
-      }
-  
-      position += pageHeightPx;
-      page++;
-    }
-  
-    // 👇 Aquí va la descarga "manual" que evita el PDF negro en Safari
-    const blob = pdf.output('blob');
-    const blobUrl = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = blobUrl;
-    a.download = `medical_form_${this.name}.pdf`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(blobUrl); // Limpieza
-  
-    this.creating = false;
-  }
-  
 
+    this.creating = true;
+    const el = document.getElementById('pdf-content');
+    if (!el) return;
+
+    const canvas = await html2canvas(el, { scale: 1 });
+    const imgData = canvas.toDataURL('image/png');
+
+    const pdf = new jsPDF('p', 'mm', 'a4');
+    const pdfW = pdf.internal.pageSize.getWidth();
+    const pdfH = pdf.internal.pageSize.getHeight();
+
+    const img = new Image();
+    img.src = imgData;
+
+    img.onload = () => {
+      const imgH = (img.height * pdfW) / img.width;
+      let y = 0;
+
+      while (y < imgH) {
+        pdf.addImage(img, 'PNG', 0, -y, pdfW, imgH);
+        y += pdfH;
+        if (y < imgH) pdf.addPage();
+      }
+      pdf.save(`medical_form_${this.name}.pdf`);
+    };
+  }
 
 
   checkComplet(): boolean {
@@ -121,7 +85,6 @@ export class SubmitComponent implements OnInit {
     if (!this.signature) {
       this.show_alert_signature = true;
     }
-    return true
     return !(this.show_alert || this.show_alert_name || this.show_alert_signature);
   }
 
