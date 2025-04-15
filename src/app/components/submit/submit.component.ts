@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { QuestionsService } from 'src/app/services/questions.service';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+import { saveAs } from 'file-saver';
+
 
 @Component({
   selector: 'app-submit',
@@ -35,27 +37,30 @@ export class SubmitComponent implements OnInit {
   captureSignature(signature: string): void {
     this.signature = signature;
   }
-
   async generatePDFfromHTML() {
     if (this.checkComplet()) {
-      this.creating = true
+      this.creating = true;
       const element: any = document.getElementById('pdf-content');
       if (!element) { return; }
-
+  
       const canvas = await html2canvas(element, { scale: 3, logging: true });
       const imgData = canvas.toDataURL('image/png');
-
+  
       const pdf = new jsPDF();
       const imgProps = pdf.getImageProperties(imgData);
       const pdfWidth = pdf.internal.pageSize.getWidth();
       const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-
+  
       pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
-
-      pdf.save(`medical_form_${this.name}.pdf`);
-      this.creating = false
+  
+      const pdfOutput = pdf.output('blob');
+      const blob = new Blob([pdfOutput], { type: 'application/pdf' });
+      saveAs(blob, `medical_form_${this.name}.pdf`);
+  
+      this.creating = false;
     }
   }
+  
   
   checkComplet(): boolean {
     this.show_alert = false;
