@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { QuestionsService } from 'src/app/services/questions.service';
 
 @Component({
-  selector: 'app-medical',
-  templateUrl: './medical.component.html',
-  styleUrls: ['./medical.component.css']
+  selector: 'app-rental',
+  templateUrl: './rental.component.html',
+  styleUrls: ['./rental.component.css']
 })
-export class MedicalComponent implements OnInit {
+export class RentalComponent {
   questions: any = undefined
   name = ""
 

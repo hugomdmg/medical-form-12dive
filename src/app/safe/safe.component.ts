@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { QuestionsService } from 'src/app/services/questions.service';
 
 @Component({
-  selector: 'app-medical',
-  templateUrl: './medical.component.html',
-  styleUrls: ['./medical.component.css']
+  selector: 'app-safe',
+  templateUrl: './safe.component.html',
+  styleUrls: ['./safe.component.css']
 })
-export class MedicalComponent implements OnInit {
+export class SafeComponent {
   questions: any = undefined
   name = ""
 

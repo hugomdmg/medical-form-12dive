@@ -24,46 +24,107 @@
     "question8": "8. I have had back problems, hernia, ulcers, or diabetes.",
     "question9": "9. I have had stomach or intestine problems, including recent diarrhea.",
     "question10": "10. I am taking prescription medications (with the exception of birth control or anti-malarial drugs other than mefloquine (Lariam).",
-    
     "question1_1": "Chest surgery, heart surgery, heart valve surgery, an implantable medical device (eg, stent, pacemaker, neurostimulator), pneumothorax, and/or chronic lung disease.",
     "question1_2": "Asthma, wheezing, severe allergies, hay fever or congested airways within the last 12 months that limits my physical activity/exercise.",
     "question1_3": "A problem or illness involving my heart such as: angina, chest pain on exertion, heart failure, immersion pulmonary edema, heart attack or stroke, OR am taking medication for any heart condition.",
     "question1_4": "Recurrent bronchitis and currently coughing within the past 12 months, OR have been diagnosed with emphysema.",
     "question1_5": "A diagnosis of COVID-19.",
-
     "question2_1": "I currently smoke or inhale nicotine by other means.",
     "question2_2": "I have a high cholesterol level.",
     "question2_3": "I have high blood pressure.",
     "question2_4": "I have had a close blood relative die suddenly or of cardiac disease or stroke before the age of 50, OR have a family history of heart disease before age 50 (including abnormal heart rhythms, coronary artery disease or cardiomyopathy).",
-
     "question4_1": "Sinus surgery within the last 6 months.",
     "question4_2": "Ear disease or ear surgery, hearing loss, or problems with balance.",
     "question4_3": "Recurrent sinusitis within the past 12 months.",
     "question4_4": "Eye surgery within the past 3 months",
-
     "question6_1": "Head injury with loss of consciousness within the past 5 years",
     "question6_2": "Persistent neurologic injury or disease",
     "question6_3": "Recurring migraine headaches within the past 12 months, or take medications to prevent them.",
     "question6_4": "Blackouts or fainting (full/partial loss of consciousness) within the last 5 years",
     "question6_5": "Epilepsy, seizures, or convulsions, OR take medications to prevent them.",
-
     "question7_1": "Behavioral health, mental or psychological problems requiring medical/psychiatric treatment",
     "question7_2": "Major depression, suicidal ideation, panic attacks, uncontrolled bipolar disorder requiring medication/psychiatric treatment.",
     "question7_3": "Been diagnosed with a mental health condition or a learning/developmental disorder that requires ongoing care or special accommodation.",
     "question7_4": "An addiction to drugs or alcohol requiring treatment within the last 5 years.",
-
     "question8_1": "Recurrent back problems in the last 6 months that limit my everyday activity",
     "question8_2": "Back or spinal surgery within the last 12 months",
     "question8_3": "Diabetes, either drug or diet controlled, OR gestational diabetes within the last 12 months.",
     "question8_4": "An uncorrected hernia that limits my physical abilities",
     "question8_5": "Active or untreated ulcers, problem wounds, or ulcer surgery within the last 6 months",
-
     "question9_1": "Ostomy surgery and do not have medical clearance to swim or engage in physical activity.",
     "question9_2": "Dehydration requiring medical intervention within the last 7 days.",
     "question9_3": "Active or untreated stomach or intestinal ulcers or ulcer surgery within the last 6 months.",
     "question9_4": "Frequent heartburn, regurgitation, or gastroesophageal reflux disease (GERD).",
     "question9_5": "Active or uncontrolled ulcerative colitis or Crohn’s disease.",
-    "question9_6": "Bariatric surgery within the last 12 months"
-
-
+    "question9_6": "Bariatric surgery within the last 12 months",
+    "personal_data": {
+        "title": "Personal Data Form",
+        "email": "Email",
+        "name": "Name",
+        "last_name": "Last name",
+        "street": "Street",
+        "postal": "ZIP/postal code",
+        "country": "Country of residence",
+        "city": "City",
+        "phone": "Phone number",
+        "gender": "Gender",
+        "male": "male",
+        "female": "female",
+        "not_say": "prefer not to say",
+        "certificationLevel": "Certification level",
+        "certificationOptions": {
+            "scubaDiver": "Scuba Diver",
+            "openWaterDiver": "Open Water Diver",
+            "advancedOpenWaterDiver": "Advance Open Water Diver",
+            "rescueDiver": "Rescue Diver",
+            "masterDiver": "Master Diver",
+            "diverMasterInstructor": "Diver master/ instructor",
+            "notCertified": "Not certified"
+        },
+        "numberOfDives": "Number of dives",
+        "dateOfLastDive": "Date of last dive",
+        "dateFormat": "Month, day, year",
+        "needRefresher": "Do you need a refresher?",
+        "yes": "Yes",
+        "no": "No",
+        "haveInsurance": "Do you have a diving insurance?",
+        "insuranceNumber": "Insurance number",
+        "insuranceCompany": "Insurance Company",
+        "needEquipment": "Do you need to rent a diving Equipment?",
+        "bootsSize": "Boots size (EU size)",
+        "bcdSize": "BCD size",
+        "wetsuitSize": "Wetsuit size",
+        "wantPhotosVideos": "Do you want underwater pictures and videos?",
+        "preferredDiveDate": "Prefered date of your dives",
+        "stayDuration": "How long are you staying on the island?",
+        "departureDate": "Departure Date",
+        "promotionsEmail": "Do you want us to email you with special promotions?",
+        "consentSocialMedia": "Do you give us consent to post you on social media?",
+        "howDidYouKnow": "How did you know about us?",
+        "referralOptions": {
+            "website": "Website",
+            "socialMedia": "Social Media",
+            "bookingAgent": "Booking Agent",
+            "friend": "Friend",
+            "other": "Other…"
+        }
+    },
+    "safe": {
+        "title": "Standard Safe Diving Practices Statement of Understanding",
+        "intro_title": "Read carefully before signing.",
+        "I": "I",
+        "intro": "This statement informs you of the established practices for safe scuba diving and freediving. These practices are provided for your acknowledgment and agreement, and they are intended to enhance your comfort and safety while diving. It is mandatory that you sign this statement as proof that you are aware of these safe diving practices. Please read and discuss the statement before signing it. If you are a minor, the form must also be signed by a parent or guardian.",
+        "text": "understand that as a diver I must:<br><br><strong>1.</strong> Maintain good physical and mental condition for diving. Avoid diving under the influence of alcohol or dangerous drugs. Maintain my diving skills and strive to improve them through continued education and review them in controlled conditions after periods of diving inactivity, and consult my course materials to stay up-to-date and recall important information.<br><br><strong>2.</strong> Be familiar with my dive sites. If not, receive a formal orientation from a competent local source. If dive conditions are worse than those in which I have experience, postpone the dive or choose an alternative site with better conditions. Participate only in diving activities that are within my training and experience. Do not participate in cave or technical diving unless specifically trained for such activities. <br><br><strong>3.</strong> Use complete, well-maintained, reliable equipment that I am familiar with, and inspect it for proper fit and operation before each dive. Have a buoyancy control device, low-pressure inflation system, submersible pressure gauge, alternate air source, and a dive planning/control device (dive computer, RDP/dive tables, whichever I am trained to use) when scuba diving. Refuse to allow uncertified divers to use my equipment. <br><br><strong>4.</strong> Listen carefully to dive briefings and instructions and follow the advice of those supervising my diving activities. Recognize that additional training is recommended for participation in specialized diving activities, in different geographic areas, and after periods of inactivity exceeding six months. <br><br><strong>5.</strong> Observe the buddy system on every dive. Plan dives (including communication, separation, and emergency procedures) with my buddy. <br><br><strong>6.</strong> Master dive planning (use of dive computer and dive tables). Make all dives as no-decompression dives and allow for a safety margin. Have a means to monitor depth and time underwater. Limit maximum depth according to my training and experience. Ascend at a rate no faster than 18 meters/60 feet per minute. Be a SAFE diver—ascend slowly from every dive. Perform a safety stop as an additional precaution, usually at 5 meters/15 feet for three minutes or more. <br><br><strong>7.</strong> Maintain proper buoyancy. Adjust weights at the surface for neutral buoyancy without air in my buoyancy control device. Maintain neutral buoyancy underwater. Be able to float and rest at the surface. Keep weights quick-releasable and establish buoyancy in case of a problem while diving. Carry at least one surface signaling device (such as a signaling tube, whistle, mirror). <br><br><strong>8.</strong> Breathe properly while diving. Never hold my breath or stop breathing when breathing compressed air, and avoid excessive hyperventilation when breath-hold diving. Avoid overexertion while entering and being underwater, and dive within my limitations. <br><br><strong>9.</strong> Use a boat, float, or other surface support station whenever feasible. <br><br><strong>10</strong>. Know and obey local diving laws and regulations, including fishing and hunting laws and dive flag legislation. <br><br><strong>I understand the importance and purpose of these established practices. I acknowledge that they are for my own safety and well-being, and that failure to adhere to them may expose me to diving risks.</strong> <br><br>Diver's Signature / Parent or Guardian’s Signature if under 18:"
+    },
+    "rental": {
+        "title": "Rental Agreement",
+        "text1": "<strong>RENTAL DURATION</strong><br> The rental is granted until the end of the course or for a period of _ _ _ _ days.",
+        "text2": "<strong>RENTAL PRICES</strong><br> The rental amount for the period is calculated according to the One Two Dive price list. Please note that for some courses, the rental price is included in the package. The customer agrees to pay the full amount before the excursion or course begins.",
+        "text3": "<strong>TERMS OF USE</strong><br> Modifying the equipment is strictly prohibited. The equipment is tested before being rented. The customer acknowledges all safety warnings, risks, and precautions to be taken with the rented equipment through this contract. The rented equipment may not be rented out, sold, transferred, or pledged by the customer. The customer is expected to be familiar with the operation and handling of the equipment and will be responsible for any misuse.",
+        "text4": "<strong>RETURN</strong><br> The returned equipment will be tested by One Two Dive. Any defect, irregularity, or excessive wear related to the specified use observed during this inspection is the customer's responsibility. In case of loss or damage to the equipment due to incorrect, irresponsible, or inappropriate use by the customer, One Two Dive will charge the replacement cost.",
+        "text5": "<strong>RESPONSIBILITY</strong><br> The customer assumes full responsibility for the equipment as soon as they take possession and until it is returned. Under no circumstances shall One Two Dive be held responsible for any bodily injury or material damage resulting from misuse of the equipment by the customer.",
+        "text6": "<strong>EQUIPMENT CONDITION</strong><br> One Two Dive will establish an inventory of the equipment, including accessories and consumables, in the equipment leaflet, which will be checked at the end of the rental period.",
+        "text7": "By signing this form, I consent that I have read and accept the Terms and Conditions, the Rental Agreement, and the Refund Policy of One Two Dive.",
+        "sign": "Signature of the customer/guardian:"
+    }
 }

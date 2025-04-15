@@ -1,0 +1,19 @@
+<div class="question-container">
+    <div id="title-container">
+        <h1>{{'personal_data.title' | translate}}</h1>
+    </div>
+</div>
+
+<div *ngFor="let question of questions" class="question">
+    <p>{{'personal_data.'+question.name | translate}}:</p>
+    <input *ngIf="question.answer != undefined" type="text">
+    <div class="options" *ngIf="question.options !=undefined">
+        <div class="option" *ngFor="let option of question.options" >
+            <input type="checkbox"><p>{{'personal_data.'+option.name | translate}}</p>
+        </div>
+    </div>
+</div>
+
+
+
+<app-submit [questions]="questions"></app-submit>

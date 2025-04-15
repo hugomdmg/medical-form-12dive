@@ -1,0 +1,19 @@
+<div class="question-container">
+    <div id="title-container">
+        <h1>{{'safe.title' | translate}}</h1>
+    </div>
+    <h3>{{'safe.intro_title' | translate}}</h3>
+    <p>{{'safe.intro' | translate}}</p>
+</div>
+
+
+<div class="question-container">
+    <div id="name-input">
+        <p>{{'safe.I' | translate}}</p>
+        <input type="text">
+        <p>,</p>
+    </div>
+    <p [innerHTML]="'safe.text' | translate"></p>
+</div>
+
+<app-submit [questions]="questions"></app-submit>

@@ -15,9 +15,16 @@ import { SubmitComponent } from './components/submit/submit.component';
 import { SignatureComponent } from './components/signature/signature.component';
 import { MedicalComponent } from './components/medical/medical.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { PersonalComponent } from './components/personal/personal.component';
+import { RentalComponent } from './rental/rental.component';
+import { SafeComponent } from './safe/safe.component';
 
 const routes: Routes = [
-  {path: 'medical', component: MedicalComponent}
+  { path: '', component: MedicalComponent },
+  { path: 'personal', component: PersonalComponent },
+  { path: 'rental', component: RentalComponent },
+  { path: 'safe', component: SafeComponent }
+
 ]
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -32,7 +39,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     SubmitComponent,
     SignatureComponent,
     MedicalComponent,
-    NavBarComponent
+    NavBarComponent,
+    PersonalComponent,
+    RentalComponent,
+    SafeComponent
   ],
   imports: [
     BrowserModule,

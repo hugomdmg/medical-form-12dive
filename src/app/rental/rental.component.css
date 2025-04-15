@@ -1,0 +1,28 @@
+
+.question-container {
+    border-radius: 0.3rem;
+    padding: 1rem;
+    background-color: white;
+    margin: 1rem;
+    opacity: 0.8;
+}
+
+#name-input {
+   display: flex;
+   align-items: center;
+}
+
+#name-input input{
+    height: 1rem;
+    margin: 0.2rem;
+    width: 60%;
+}
+
+
+@media (max-width: 768px) {
+    .question-container {
+        padding: 0.8rem;
+        margin: 0.2rem;
+    }
+}
+
