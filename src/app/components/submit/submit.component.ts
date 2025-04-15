@@ -36,36 +36,44 @@ export class SubmitComponent implements OnInit {
   captureSignature(signature: string): void {
     this.signature = signature;
   }
-  
+
   async generatePDFfromHTML() {
     if (!this.checkComplet()) return;
-
+  
     this.creating = true;
     const el = document.getElementById('pdf-content');
     if (!el) return;
-
+  
     const canvas = await html2canvas(el, { scale: 1 });
     const imgData = canvas.toDataURL('image/png');
-
+  
+    const img = await this.loadImage(imgData);
+  
     const pdf = new jsPDF('p', 'mm', 'a4');
     const pdfW = pdf.internal.pageSize.getWidth();
     const pdfH = pdf.internal.pageSize.getHeight();
-
-    const img = new Image();
-    img.src = imgData;
-
-    img.onload = () => {
-      const imgH = (img.height * pdfW) / img.width;
-      let y = 0;
-
-      while (y < imgH) {
-        pdf.addImage(img, 'PNG', 0, -y, pdfW, imgH);
-        y += pdfH;
-        if (y < imgH) pdf.addPage();
-      }
-      pdf.save(`medical_form_${this.name}.pdf`);
-    };
+  
+    const imgH = (img.height * pdfW) / img.width;
+    let y = 0;
+  
+    while (y < imgH) {
+      pdf.addImage(img, 'PNG', 0, -y, pdfW, imgH);
+      y += pdfH;
+      if (y < imgH) pdf.addPage();
+    }
+  
+    pdf.save(`medical_form_${this.name}.pdf`);
+    this.creating = false;
   }
+  
+  private loadImage(src: string): Promise<HTMLImageElement> {
+    return new Promise((resolve) => {
+      const img = new Image();
+      img.onload = () => resolve(img);
+      img.src = src;
+    });
+  }
+  
 
 
   checkComplet(): boolean {
