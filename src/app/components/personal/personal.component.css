@@ -5,7 +5,6 @@
     background-color: white;
     margin: 1rem;
     opacity: 0.8;
-    width: 46rem;
 }
 
 .input-container {
@@ -36,12 +35,25 @@
     display: flex;
 }
 
+#formater {
+    opacity: 0;
+    height: 0rem;
+}
+
+
+@media (min-width:760px) {
+    .question-container {
+        width: 46rem;
+    }
+}
+
 
 @media (max-width: 768px) {
     .question-container,
     .question {
         padding: 0.8rem;
         margin: 0.2rem;
+        /* width: 48rem; */
     }
 }
 

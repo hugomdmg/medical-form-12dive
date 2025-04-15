@@ -45,25 +45,27 @@ img {
 }
 
 a {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     border-radius: 0.2rem;
     border-right: 4px solid rgb(91, 169, 243);
     background-color: rgb(151, 226, 245);
-    padding: 0.2rem;
+    padding: 0.2rem 0.5rem;
     margin: 0.2rem;
-    width: 2rem;
+    max-width: 2rem;
     height: 2rem;
     overflow: hidden;
     white-space: nowrap;
-    transition: width 0.3s ease;
+    transition: max-width 0.3s ease, padding 0.3s ease;
     text-decoration: none;
     color: black;
   }
   
   a:hover {
-    width: 10rem;
+    max-width: 15rem;
+    padding: 0.2rem 1rem;
   }
+  
   
 
 @media (max-width: 768px) {
@@ -78,8 +80,24 @@ a {
 
 
     #bar {
+        display: flex;
+        flex-direction: column;
         padding: 0.8rem;
         margin: 0.2rem;
+    }
+
+    
+
+     a {
+        width: 15rem;
+        max-width: none;
+        padding: 0.2rem 1rem;
+        transition: none;
+      }
+    
+    #links-container {
+        display: flex;
+        flex-direction: column;
     }
 
 }
