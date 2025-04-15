@@ -40,32 +40,32 @@ export class SubmitComponent implements OnInit {
 
   async generatePDFfromHTML() {
     if (!this.checkComplet()) return;
-  
+
     this.creating = true;
     const element = document.getElementById('pdf-content');
     if (!element) return;
-  
+
     // Capturamos el contenido como una imagen con html2canvas
-    const canvas = await html2canvas(element, { scale: 1 });
+    const canvas = await html2canvas(element, { scale: 0.8 });
     const imgHeight = canvas.height;
     const imgWidth = canvas.width;
-  
+
     const pdf = new jsPDF('p', 'mm', 'a4');
     const pdfWidth = pdf.internal.pageSize.getWidth();
     const pdfHeight = pdf.internal.pageSize.getHeight();
-  
+
     const ratio = pdfWidth / imgWidth;
     const pageHeightPx = pdfHeight / ratio;
-  
+
     let position = 0;
     let page = 0;
-  
+
     while (position < imgHeight) {
       // Crear canvas temporal para cada página
       const pageCanvas = document.createElement('canvas');
       pageCanvas.width = imgWidth;
       pageCanvas.height = Math.min(pageHeightPx, imgHeight - position);
-  
+
       const pageCtx = pageCanvas.getContext('2d');
       if (pageCtx) {
         pageCtx.drawImage(
@@ -79,23 +79,26 @@ export class SubmitComponent implements OnInit {
           imgWidth,
           pageCanvas.height
         );
-  
+
         const imgData = pageCanvas.toDataURL('image/png');
         if (page > 0) pdf.addPage();
         pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, (pageCanvas.height * pdfWidth) / imgWidth);
       }
-  
+
       position += pageHeightPx;
       page++;
     }
-  
-    pdf.save(`medical_form_${this.name}.pdf`);
+
+    // ... todo igual hasta antes del save
+    const pdfBlob = pdf.output('blob');
+    saveAs(pdfBlob, `medical_form_${this.name}.pdf`);
     this.creating = false;
+
   }
-  
-  
-  
-  
+
+
+
+
   checkComplet(): boolean {
     this.show_alert = false;
     this.show_alert_name = false;
