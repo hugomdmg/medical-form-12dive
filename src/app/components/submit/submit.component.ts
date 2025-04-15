@@ -18,7 +18,8 @@ export class SubmitComponent implements OnInit {
   show_alert = false
   show_alert_name = false
   show_alert_signature = false
-  date = new Date().toISOString().split('T')[0]
+  data = new Date()
+  date = `${this.data.getDate().toString().padStart(2, '0')} / ${this.data.getMonth().toString().padStart(2, '0')} / ${this.data.getFullYear()}`
 
   constructor(private questionsService: QuestionsService) { }
 
