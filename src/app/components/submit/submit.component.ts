@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { QuestionsService } from 'src/app/services/questions.service';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
@@ -10,8 +10,7 @@ import html2canvas from 'html2canvas';
   styleUrls: ['./submit.component.css']
 })
 export class SubmitComponent implements OnInit {
-  title = 'medical';
-  questions: any = undefined;
+  @Input() questions: any = undefined;
   signature: string | null = null;
   creating = false
   name = ""
@@ -24,11 +23,6 @@ export class SubmitComponent implements OnInit {
   constructor(private questionsService: QuestionsService) { }
 
   ngOnInit(): void {
-    this.questionsService.questions$.subscribe(questions => {
-      if (questions) {
-        this.questions = questions;
-      }
-    });
     this.questionsService.name$.subscribe(name => {
       this.name = name
     })
@@ -66,6 +60,7 @@ export class SubmitComponent implements OnInit {
       }
       pdf.save(`medical_form_${this.name}.pdf`);
     };
+    this.creating = false
   }
 
 

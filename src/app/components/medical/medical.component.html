@@ -1,0 +1,20 @@
+<div class="question-container">
+    <div id="title-container">
+        <h1>{{'title' | translate}}</h1>
+    </div>
+
+    <p> {{ 'intro' | translate }} </p>
+    <p [innerHTML]="'title_2' | translate"></p>
+    <p>{{'name' | translate}}</p>
+    <input id="name-input" type="text" (input)="updateName($event)">
+</div>
+
+<div *ngFor="let question of questions" class="question">
+    <app-question [question_text]="question.name" (eventEmitter)="updateAnswer(question.name, $event)"></app-question>
+</div>
+
+<div class="question-container">
+    <p [innerHTML]="'final_text' | translate"></p>
+</div>
+
+<app-submit [questions]="questions"></app-submit>

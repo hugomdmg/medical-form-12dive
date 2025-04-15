@@ -1,0 +1,85 @@
+img {
+    width: 1rem;
+    height: 1rem;
+}
+
+#bar {
+    display: flex;
+    align-items: center;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    background-color: white;
+    margin: 1rem;
+    opacity: 0.8;
+}
+
+#languages-container {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+#languages-container button {
+    border: none;
+    background: transparent;
+    margin: 0.1rem;
+    padding: 0.2rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+#languages-container button:hover {
+    background-color: rgb(62, 144, 165);
+}
+
+
+#logo {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 2rem;
+}
+
+#links-container {
+    display: flex;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    border-radius: 0.2rem;
+    border-right: 4px solid rgb(91, 169, 243);
+    background-color: rgb(151, 226, 245);
+    padding: 0.2rem;
+    margin: 0.2rem;
+    width: 2rem;
+    height: 2rem;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 0.3s ease;
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:hover {
+    width: 10rem;
+  }
+  
+
+@media (max-width: 768px) {
+
+    #languages-container {
+        justify-content: center;
+    }
+
+    #languages-container button {
+        width: 2.5rem;
+    }
+
+
+    #bar {
+        padding: 0.8rem;
+        margin: 0.2rem;
+    }
+
+}

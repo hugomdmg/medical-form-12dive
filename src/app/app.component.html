@@ -1,32 +1,5 @@
 <div id="main">
-  <div id="languages-container">
-    <button (click)="changeLanguage('en')"><img src="assets/img/en.png"></button>
-    <button (click)="changeLanguage('es')"><img src="assets/img/es.png"></button>
-    <button (click)="changeLanguage('fr')"><img src="assets/img/fr.png"></button>
-    <button (click)="changeLanguage('ge')"><img src="assets/img/ge.png"></button>
-    <button (click)="changeLanguage('ch')"><img src="assets/img/ch.png"></button>
-  </div>
+  <app-nav-bar></app-nav-bar>
 
-  <div class="question-container">
-    <div id="title-container">
-      <img id="logo" src="../assets/img/12divelogo.jpeg" alt="">
-      <h1>{{'title' | translate}}</h1>
-    </div>
-
-    <p> {{ 'intro' | translate }} </p>
-    <p [innerHTML]="'title_2' | translate"></p>
-    <p>{{'name' | translate}}</p>
-    <input id="name-input" type="text" (input)="updateName($event)">
-  </div>
-
-  <div *ngFor="let question of questions" class="question">
-    <app-question [question_text]="question.name" (eventEmitter)="updateAnswer(question.name, $event)"></app-question>
-  </div>
-
-  <div class="question-container">
-    <p [innerHTML]="'final_text' | translate"></p>
-  </div>
-
-  <app-submit></app-submit>
-
+  <router-outlet></router-outlet>
 </div>
