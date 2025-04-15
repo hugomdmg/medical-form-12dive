@@ -11,6 +11,12 @@
 </div>
 
 <div id="pdf-content">
+    <div id="title-container">
+        <img id="logo" src="../assets/img/12divelogo.jpeg" alt="">
+        <h1>{{'title' | translate}}</h1>
+    </div>
+    <p> {{ 'intro' | translate }} </p>
+    <p [innerHTML]="'title_2' | translate"></p>
     <div *ngFor="let question of questions">
         <h3>{{ question.name | translate }}</h3>
 
@@ -36,6 +42,7 @@
         </div>
     </div>
     <div>
+        <p [innerHTML]="'final_text' | translate"></p>
         <h3>{{'signed' | translate}}: {{name}}, {{date}}</h3>
         <img [src]="signature" alt="sign">
     </div>
