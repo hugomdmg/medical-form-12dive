@@ -37,53 +37,38 @@ export class SubmitComponent implements OnInit {
   captureSignature(signature: string): void {
     this.signature = signature;
   }
+
   async generatePDFfromHTML() {
-    if (this.checkComplet()) {
-      this.creating = true;
+    if (!this.checkComplet()) return;
   
-      const element: any = document.getElementById('pdf-content');
-      if (!element) return;
+    this.creating = true;
+    const element = document.getElementById('pdf-content');
+    if (!element) return;
   
-      const canvas = await html2canvas(element, { scale: 2 });
-      const imgSrc = canvas.toDataURL('image/png');
+    const canvas = await html2canvas(element, { scale: 2 });
+    const img = new Image();
+    img.src = canvas.toDataURL('image/png');
   
-      const img = new Image();
-      img.src = imgSrc;
+    img.onload = () => {
+      const pdf = new jsPDF('p', 'mm', 'a4');
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = pdf.internal.pageSize.getHeight();
   
-      img.onload = async () => {
-        const pdf = new jsPDF('p', 'mm', 'a4');
-        const pdfWidth = pdf.internal.pageSize.getWidth();
-        const pdfHeight = pdf.internal.pageSize.getHeight();
+      const imgWidth = pdfWidth;
+      const imgHeight = (img.height * imgWidth) / img.width;
   
-        const imgProps = {
-          width: img.width,
-          height: img.height
-        };
+      let position = 0;
   
-        const imgWidth = pdfWidth;
-        const imgHeight = (imgProps.height * imgWidth) / imgProps.width;
+      while (position < imgHeight) {
+        pdf.addImage(img, 'PNG', 0, -position, imgWidth, imgHeight);
+        position += pdfHeight;
+        if (position < imgHeight) pdf.addPage();
+      }
   
-        let position = 0;
-        let pageHeightLeft = imgHeight;
-  
-        while (pageHeightLeft > 0) {
-          pdf.addImage(img, 'PNG', 0, position ? -position : 0, imgWidth, imgHeight);
-          
-          pageHeightLeft -= pdfHeight;
-  
-          if (pageHeightLeft > 0) {
-            pdf.addPage();
-            position += pdfHeight;
-          }
-        }
-  
-        const pdfBlob = pdf.output('blob');
-        const blob = new Blob([pdfBlob], { type: 'application/pdf' });
-        saveAs(blob, `medical_form_${this.name}.pdf`);
-  
-        this.creating = false;
-      };
-    }
+      const blob = new Blob([pdf.output('blob')], { type: 'application/pdf' });
+      saveAs(blob, `medical_form_${this.name}.pdf`);
+      this.creating = false;
+    };
   }
   
   
@@ -106,8 +91,7 @@ export class SubmitComponent implements OnInit {
       this.show_alert_signature = true;
     }
 
-    // return !(this.show_alert || this.show_alert_name || this.show_alert_signature);
-    return true
+    return !(this.show_alert || this.show_alert_name || this.show_alert_signature);
   }
 
 }
