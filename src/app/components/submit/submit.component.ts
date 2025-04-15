@@ -45,7 +45,7 @@ export class SubmitComponent implements OnInit {
     if (!el) return;
 
     const canvas = await html2canvas(el, { scale: 1 });
-    const imgData = canvas.toDataURL('image/png');
+    const imgData = canvas.toDataURL('image/jpeg');
 
     const pdf = new jsPDF('p', 'mm', 'a4');
     const pdfW = pdf.internal.pageSize.getWidth();
@@ -59,7 +59,7 @@ export class SubmitComponent implements OnInit {
       let y = 0;
 
       while (y < imgH) {
-        pdf.addImage(img, 'PNG', 0, -y, pdfW, imgH);
+        pdf.addImage(img, 'JPEG', 0, -y, pdfW, imgH);
         y += pdfH;
         if (y < imgH) pdf.addPage();
       }
