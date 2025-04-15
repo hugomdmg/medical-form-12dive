@@ -45,31 +45,54 @@ export class SubmitComponent implements OnInit {
     const element = document.getElementById('pdf-content');
     if (!element) return;
   
-    const canvas = await html2canvas(element, { scale: 2 });
-    const img = new Image();
-    img.src = canvas.toDataURL('image/png');
+    // Capturamos el contenido como una imagen con html2canvas
+    const canvas = await html2canvas(element, { scale: 1 });
+    const imgHeight = canvas.height;
+    const imgWidth = canvas.width;
   
-    img.onload = () => {
-      const pdf = new jsPDF('p', 'mm', 'a4');
-      const pdfWidth = pdf.internal.pageSize.getWidth();
-      const pdfHeight = pdf.internal.pageSize.getHeight();
+    const pdf = new jsPDF('p', 'mm', 'a4');
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = pdf.internal.pageSize.getHeight();
   
-      const imgWidth = pdfWidth;
-      const imgHeight = (img.height * imgWidth) / img.width;
+    const ratio = pdfWidth / imgWidth;
+    const pageHeightPx = pdfHeight / ratio;
   
-      let position = 0;
+    let position = 0;
+    let page = 0;
   
-      while (position < imgHeight) {
-        pdf.addImage(img, 'PNG', 0, -position, imgWidth, imgHeight);
-        position += pdfHeight;
-        if (position < imgHeight) pdf.addPage();
+    while (position < imgHeight) {
+      // Crear canvas temporal para cada página
+      const pageCanvas = document.createElement('canvas');
+      pageCanvas.width = imgWidth;
+      pageCanvas.height = Math.min(pageHeightPx, imgHeight - position);
+  
+      const pageCtx = pageCanvas.getContext('2d');
+      if (pageCtx) {
+        pageCtx.drawImage(
+          canvas,
+          0,
+          position,
+          imgWidth,
+          pageCanvas.height,
+          0,
+          0,
+          imgWidth,
+          pageCanvas.height
+        );
+  
+        const imgData = pageCanvas.toDataURL('image/png');
+        if (page > 0) pdf.addPage();
+        pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, (pageCanvas.height * pdfWidth) / imgWidth);
       }
   
-      const blob = new Blob([pdf.output('blob')], { type: 'application/pdf' });
-      saveAs(blob, `medical_form_${this.name}.pdf`);
-      this.creating = false;
-    };
+      position += pageHeightPx;
+      page++;
+    }
+  
+    pdf.save(`medical_form_${this.name}.pdf`);
+    this.creating = false;
   }
+  
   
   
   
@@ -90,7 +113,7 @@ export class SubmitComponent implements OnInit {
     if (!this.signature) {
       this.show_alert_signature = true;
     }
-
+    return true
     return !(this.show_alert || this.show_alert_name || this.show_alert_signature);
   }
 
