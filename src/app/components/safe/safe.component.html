@@ -10,7 +10,7 @@
 <div class="question-container">
     <div id="name-input">
         <p>{{'safe.I' | translate}}</p>
-        <input type="text">
+        <input type="text" (input)="updateName($event)">
         <p>,</p>
     </div>
     <p [innerHTML]="'safe.text' | translate"></p>
