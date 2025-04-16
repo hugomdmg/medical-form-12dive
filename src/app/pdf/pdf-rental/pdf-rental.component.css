@@ -42,3 +42,20 @@
 img {
     height: 6rem;
 }
+
+#input-text {
+    display: flex;
+    align-items: end;
+}
+
+#input-text p {
+    margin-bottom: 0px;
+}
+
+#answer {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(224, 224, 224);
+    margin: 2px;
+    width: 3rem;
+}

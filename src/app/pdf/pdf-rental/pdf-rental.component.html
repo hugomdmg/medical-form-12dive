@@ -8,7 +8,7 @@
     <div class="question-container">
         <div id="input-text">
             <p [innerHTML]="'rental.text1' | translate"></p>
-            <p>{{questions[0].answer}}</p>
+            <p id="answer"> {{questions[0].answer}} </p>
             <p>{{'rental.days' | translate}}.</p>
         </div>
         <div *ngFor="let text of [2,3,4,5,6,7]">
