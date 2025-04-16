@@ -93,11 +93,11 @@ export default [
         name: "needRefresher",
         options: [
             {
-                name: "yes",
+                name: "yes1",
                 answer: ""
             },
             {
-                name: "no",
+                name: "no1",
                 answer: ""
             },
         ]
@@ -106,11 +106,11 @@ export default [
         name: "haveInsurance",
         options: [
             {
-                name: "yes",
+                name: "yes2",
                 answer: ""
             },
             {
-                name: "no",
+                name: "no2",
                 answer: ""
             },
         ]
@@ -127,11 +127,11 @@ export default [
         name: "needEquipment",
         options: [
             {
-                name: "yes",
+                name: "yes3",
                 answer: ""
             },
             {
-                name: "no",
+                name: "no3",
                 answer: ""
             },
         ]
@@ -152,11 +152,11 @@ export default [
         name: "wantPhotosVideos",
         options: [
             {
-                name: "yes",
+                name: "yes4",
                 answer: ""
             },
             {
-                name: "no",
+                name: "no4",
                 answer: ""
             },
         ]
@@ -177,11 +177,11 @@ export default [
         name: "promotionsEmail",
         options: [
             {
-                name: "yes",
+                name: "yes5",
                 answer: ""
             },
             {
-                name: "no",
+                name: "no5",
                 answer: ""
             },
         ]
@@ -190,11 +190,11 @@ export default [
         name: "consentSocialMedia",
         options: [
             {
-                name: "yes",
+                name: "yes6",
                 answer: ""
             },
             {
-                name: "no",
+                name: "no6",
                 answer: ""
             },
         ]

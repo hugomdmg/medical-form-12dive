@@ -13,7 +13,9 @@
     <div class="options" *ngIf="question.options !=undefined">
         <div class="option" *ngFor="let option of question.options">
             <input type="checkbox" (input)="updateAnswer(option.name, $event)">
-            <p>{{'personal_data.'+option.name | translate}}</p>
+            <p *ngIf="!option.name.includes('yes') && !option.name.includes('no')">{{'personal_data.'+option.name | translate}}</p>
+            <p *ngIf="option.name.includes('yes')">{{'yes' | translate}}</p>
+            <p *ngIf="option.name.includes('no')">{{'no' | translate}}</p>
         </div>
     </div>
 </div>

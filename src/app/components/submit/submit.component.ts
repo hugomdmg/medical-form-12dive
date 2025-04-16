@@ -32,7 +32,6 @@ export class SubmitComponent implements OnInit {
   }
 
   async generatePDFfromHTML() {
-    console.log(this.questions)
     if (!this.checkComplet()) return;
 
     this.creating = true;
@@ -65,6 +64,7 @@ export class SubmitComponent implements OnInit {
 
 
   checkComplet(): boolean {
+    if (this.form == 'personal') return true
     this.show_alert = false;
     this.show_alert_name = false;
     this.show_alert_signature = false;

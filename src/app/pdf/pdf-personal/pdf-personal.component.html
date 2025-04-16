@@ -1,8 +1,5 @@
 <div id="pdf-content">
-    <div id="title-container">
-        <img id="logo" src="../assets/img/12divelogo.jpeg" alt="">
-        <h1>{{'personal_data.title' | translate}}</h1>
-    </div>
+    <h1>{{'personal_data.title' | translate}}</h1>
 
     <div *ngFor="let question of questions" class="question">
         <p><strong>{{'personal_data.'+question.name | translate}}: </strong>{{question.answer}}</p>
@@ -10,7 +7,10 @@
             <div class="option" *ngFor="let option of question.options">
                 <input *ngIf="option.answer != 'on'" type="checkbox">
                 <input *ngIf="option.answer == 'on'" type="checkbox" checked>
-                <p>{{'personal_data.'+option.name | translate}}</p>
+                <p *ngIf="!option.name.includes('yes') && !option.name.includes('no')">{{'personal_data.'+option.name |
+                    translate}}</p>
+                <p *ngIf="option.name.includes('yes')">{{'yes' | translate}}</p>
+                <p *ngIf="option.name.includes('no')">{{'no' | translate}}</p>
             </div>
         </div>
     </div>
