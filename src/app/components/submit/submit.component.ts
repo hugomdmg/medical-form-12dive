@@ -17,8 +17,6 @@ export class SubmitComponent implements OnInit {
   show_alert = false
   show_alert_name = false
   show_alert_signature = false
-  data = new Date()
-  date = `${this.data.getDate().toString().padStart(2, '0')} / ${this.data.getMonth().toString().padStart(2, '0')} / ${this.data.getFullYear()}`
 
   constructor(private questionsService: QuestionsService) { }
 
@@ -81,6 +79,7 @@ export class SubmitComponent implements OnInit {
     if (!this.signature) {
       this.show_alert_signature = true;
     }
+    return true
     return !(this.show_alert || this.show_alert_name || this.show_alert_signature);
   }
 

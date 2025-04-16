@@ -7,21 +7,14 @@ import { QuestionsService } from 'src/app/services/questions.service';
   styleUrls: ['./rental.component.css']
 })
 export class RentalComponent {
-  questions: any = undefined
-  name = ""
+  days!: number;
 
   constructor(private questionsService: QuestionsService) { }
 
   ngOnInit(): void {
     this.questionsService.questions$.subscribe(questions => {
-      if (questions) { this.questions = questions }
+      // if (questions) { this.questions = questions }
     })
-    this.questionsService.name$.subscribe(name => { this.name = name })
-  }
-
-  updateName(event: Event) {
-    const name = (event.target as HTMLInputElement).value
-    this.questionsService.updateName(name)
   }
 
   updateAnswer(name: any, answer: any) {

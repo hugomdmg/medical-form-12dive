@@ -10,40 +10,4 @@
     <button class="submit" (click)="generatePDFfromHTML()">{{'submit'|translate}}</button>
 </div>
 
-<div id="pdf-content">
-    <div id="title-container">
-        <img id="logo" src="../assets/img/12divelogo.jpeg" alt="">
-        <h1>{{'title' | translate}}</h1>
-    </div>
-    <p> {{ 'intro' | translate }} </p>
-    <p [innerHTML]="'title_2' | translate"></p>
-    <div *ngFor="let question of questions">
-        <h3>{{ question.name | translate }}</h3>
-
-        <div class="answer-container" *ngIf="question.answer">
-            <p class="mark">x</p> {{'yes' | translate}}
-            <p class="mark"></p> {{'no' | translate}}
-        </div>
-        <div class="answer-container" *ngIf="question.answer === false">
-            <p class="mark"></p> {{'yes' | translate}}
-            <p class="mark">x</p> {{'no' | translate}}
-        </div>
-        <div class="answer-container" *ngIf="question.answer === undefined">
-            <p class="mark"></p> {{'yes' | translate}}
-            <p class="mark"></p> {{'no' | translate}}
-        </div>
-
-        <div class="ul">
-            <div class="li" *ngFor="let subquestion of question.subquestions">
-                <p class="mark" *ngIf="subquestion.answer">x</p>
-                <p class="mark" *ngIf="!subquestion.answer"></p>
-                <p>{{ subquestion.name | translate }}</p>
-            </div>
-        </div>
-    </div>
-    <div>
-        <p [innerHTML]="'final_text' | translate"></p>
-        <h3>{{'signed' | translate}}: {{name}}, {{date}}</h3>
-        <img [src]="signature" alt="sign">
-    </div>
-</div>
+<app-pdf-medical [questions]="questions" [signature]="signature" [name]="name"></app-pdf-medical>
