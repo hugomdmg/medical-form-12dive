@@ -2,7 +2,7 @@ export default [
     {
         name: "question1",
         answer: undefined,
-        subquestions: [
+        options: [
             {
                 name: "question1_1",
                 answer: undefined
@@ -28,7 +28,7 @@ export default [
     {
         name: "question2",
         answer: undefined,
-        subquestions: [
+        options: [
             {
                 name: "question2_1",
                 answer: undefined
@@ -54,7 +54,7 @@ export default [
     {
         name: "question4",
         answer: undefined,
-        subquestions: [
+        options: [
             {
                 name: "question4_1",
                 answer: undefined
@@ -80,7 +80,7 @@ export default [
     {
         name: "question6",
         answer: undefined,
-        subquestions: [
+        options: [
             {
                 name: "question6_1",
                 answer: undefined
@@ -106,7 +106,7 @@ export default [
     {
         name: "question7",
         answer: undefined,
-        subquestions: [
+        options: [
             {
                 name: "question7_1",
                 answer: undefined
@@ -128,7 +128,7 @@ export default [
     {
         name: "question8",
         answer: undefined,
-        subquestions: [
+        options: [
             {
                 name: "question8_1",
                 answer: undefined
@@ -154,7 +154,7 @@ export default [
     {
         name: "question9",
         answer: undefined,
-        subquestions: [
+        options: [
             {
                 name: "question9_1",
                 answer: undefined

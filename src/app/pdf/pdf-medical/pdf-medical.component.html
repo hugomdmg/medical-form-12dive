@@ -22,7 +22,7 @@
         </div>
 
         <div class="ul">
-            <div class="li" *ngFor="let subquestion of question.subquestions">
+            <div class="li" *ngFor="let subquestion of question.options">
                 <p class="mark" *ngIf="subquestion.answer">x</p>
                 <p class="mark" *ngIf="!subquestion.answer"></p>
                 <p>{{ subquestion.name | translate }}</p>

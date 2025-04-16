@@ -23,7 +23,7 @@ export class QuestionComponent implements OnInit {
     this.questionsService.questions$.subscribe(questions => {
       questions.forEach(question => {
         if (question.name == this.question_text) {
-          this.questions = question.subquestions ? question.subquestions : undefined
+          this.questions = question.options ? question.options : undefined
         }
       })
     });

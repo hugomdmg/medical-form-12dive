@@ -80,7 +80,7 @@ export class SubmitComponent implements OnInit {
     if (!this.signature) {
       this.show_alert_signature = true;
     }
-   // return true
+    return true
     return !(this.show_alert || this.show_alert_name || this.show_alert_signature);
   }
 

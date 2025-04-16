@@ -7,7 +7,7 @@
     <div *ngFor="let question of questions" class="question">
         <div class="main-input">
             <p>{{'personal_data.'+question.name | translate}}:</p>
-            <input *ngIf="question.answer != undefined" type="text">
+            <p>{{question.answer}}</p>
         </div>
         <div class="options" *ngIf="question.options !=undefined">
             <div class="option" *ngFor="let option of question.options">
@@ -15,10 +15,5 @@
                 <p>{{'personal_data.'+option.name | translate}}</p>
             </div>
         </div>
-    </div>
-
-    <div>
-        <h3>{{'signed' | translate}}: {{name}}, {{date}}</h3>
-        <img [src]="signature" alt="sign">
     </div>
 </div>

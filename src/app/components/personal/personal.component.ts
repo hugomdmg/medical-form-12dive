@@ -9,25 +9,17 @@ import questions from '../../../assets/personal_questions'
 })
 export class PersonalComponent {
   questions: any = undefined
-  name = ""
 
   constructor(private questionsService: QuestionsService) { }
 
   ngOnInit(): void {
-    // this.questionsService.questions$.subscribe(questions => {
-    //   if (questions) { this.questions = questions }
-    // })
-    // this.questionsService.name$.subscribe(name => { this.name = name })
-    this.questions = questions
+    this.questionsService.personal_questions$.subscribe(questions => {
+      if (questions) { this.questions = questions }
+    })
   }
 
-  updateName(event: Event) {
-    const name = (event.target as HTMLInputElement).value
-    this.questionsService.updateName(name)
-  }
-
-  updateAnswer(name: any, answer: any) {
-    this.questionsService.updateAnswer(name, answer)
+  updateAnswer(name: any, event:Event) {
+    this.questionsService.updatePersonalQuestions(name, (event.target as HTMLInputElement).value)
   }
 
 }
