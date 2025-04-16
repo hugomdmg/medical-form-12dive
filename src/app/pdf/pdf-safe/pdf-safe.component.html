@@ -1,0 +1,22 @@
+<div id="pdf-content">
+    <div id="title-container">
+        <img id="logo" src="../assets/img/12divelogo.jpeg" alt="">
+        <h1>{{'safe.title' | translate}}</h1>
+        <h3>{{'safe.intro_title' | translate}}</h3>
+        <p>{{'safe.intro' | translate}}</p>
+    </div>
+
+    <div class="question-container">
+        <div id="name-input">
+            <p>{{'safe.I' | translate}}</p>
+            <input type="text">
+            <p>,</p>
+        </div>
+        <p [innerHTML]="'safe.text' | translate"></p>
+    </div>
+
+    <div>
+        <h3>{{'signed' | translate}}: {{name}}, {{date}}</h3>
+        <img [src]="signature" alt="sign">
+    </div>
+</div>

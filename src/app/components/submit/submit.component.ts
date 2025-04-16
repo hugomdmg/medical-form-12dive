@@ -38,7 +38,7 @@ export class SubmitComponent implements OnInit {
     const el = document.getElementById('pdf-content');
     if (!el) return;
 
-    const canvas = await html2canvas(el, { scale: 1 });
+    const canvas = await html2canvas(el, { scale: 0.8 });
     const imgData = canvas.toDataURL('image/jpeg');
 
     const pdf = new jsPDF('p', 'mm', 'a4');

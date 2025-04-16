@@ -16,10 +16,11 @@ import { SignatureComponent } from './components/signature/signature.component';
 import { MedicalComponent } from './components/medical/medical.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { PersonalComponent } from './components/personal/personal.component';
-import { RentalComponent } from './rental/rental.component';
-import { SafeComponent } from './safe/safe.component';
+import { RentalComponent } from './components/rental/rental.component';
+import { SafeComponent } from './components/safe/safe.component';
 import { PdfMedicalComponent } from './pdf/pdf-medical/pdf-medical.component';
 import { PdfRentalComponent } from './pdf/pdf-rental/pdf-rental.component';
+import { PdfSafeComponent } from './pdf/pdf-safe/pdf-safe.component';
 
 const routes: Routes = [
   { path: '', component: MedicalComponent },
@@ -46,7 +47,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     RentalComponent,
     SafeComponent,
     PdfMedicalComponent,
-    PdfRentalComponent
+    PdfRentalComponent,
+    PdfSafeComponent
   ],
   imports: [
     BrowserModule,
