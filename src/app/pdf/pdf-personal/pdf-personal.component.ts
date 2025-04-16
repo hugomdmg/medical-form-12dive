@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import personal_questions from 'src/assets/personal_questions';
 
 @Component({
   selector: 'app-pdf-personal',
@@ -6,7 +7,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./pdf-personal.component.css']
 })
 export class PdfPersonalComponent {
-  @Input() questions: any = undefined;
+  @Input() questions: any = personal_questions;
   @Input() signature: string | null = null;
   @Input() name = ""
   data = new Date()

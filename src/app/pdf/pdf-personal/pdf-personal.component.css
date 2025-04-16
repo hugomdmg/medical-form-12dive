@@ -59,3 +59,19 @@ img {
     margin: 2px;
     width: 3rem;
 }
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.option {
+    display: flex;
+}
+
+.main-input {
+    display: flex;
+    height: 2rem;
+    align-items: center;
+}

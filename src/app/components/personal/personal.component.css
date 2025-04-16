@@ -42,10 +42,8 @@
     padding: 0rem;
 }
 
-.main-input {
-    display: flex;
-    height: 2rem;
-    align-items: center;
+.main-input input {
+    width: 20rem;
 }
 
 @media (min-width:760px) {

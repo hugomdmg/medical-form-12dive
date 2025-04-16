@@ -1,7 +1,20 @@
 <div id="pdf-content">
     <div id="title-container">
         <img id="logo" src="../assets/img/12divelogo.jpeg" alt="">
-        <h1>{{'personal.title' | translate}}</h1>
+        <h1>{{'personal_data.title' | translate}}</h1>
+    </div>
+
+    <div *ngFor="let question of questions" class="question">
+        <div class="main-input">
+            <p>{{'personal_data.'+question.name | translate}}:</p>
+            <input *ngIf="question.answer != undefined" type="text">
+        </div>
+        <div class="options" *ngIf="question.options !=undefined">
+            <div class="option" *ngFor="let option of question.options">
+                <input type="checkbox">
+                <p>{{'personal_data.'+option.name | translate}}</p>
+            </div>
+        </div>
     </div>
 
     <div>
