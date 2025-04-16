@@ -12,7 +12,7 @@
     </div>
     <div class="options" *ngIf="question.options !=undefined">
         <div class="option" *ngFor="let option of question.options">
-            <input type="checkbox">
+            <input type="checkbox" (input)="updateAnswer(option.name, $event)">
             <p>{{'personal_data.'+option.name | translate}}</p>
         </div>
     </div>
