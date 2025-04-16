@@ -170,7 +170,7 @@ export default [
         answer: ""
     },
     {
-        name: "DepartureDate",
+        name: "departureDate",
         answer: ""
     },
     {
@@ -187,7 +187,7 @@ export default [
         ]
     },
     {
-        name: "ConsentSocialMedia",
+        name: "consentSocialMedia",
         options: [
             {
                 name: "yes",
