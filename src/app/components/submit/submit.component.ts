@@ -57,7 +57,7 @@ export class SubmitComponent implements OnInit {
         y += pdfH;
         if (y < imgH) pdf.addPage();
       }
-      pdf.save(`medical_form_${this.name}.pdf`);
+      pdf.save(`${this.form}_form_${this.name}.pdf`);
     };
     this.creating = false
   }
