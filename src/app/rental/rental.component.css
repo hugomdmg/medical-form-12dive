@@ -18,6 +18,20 @@
     width: 60%;
 }
 
+#input-text {
+    display: flex;
+    align-items: end;
+}
+
+#input-text p {
+    margin-bottom: 0px;
+}
+
+#input-text input {
+    margin: 2px;
+    width: 3rem;
+}
+
 
 @media (max-width: 768px) {
     .question-container {

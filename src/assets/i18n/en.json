@@ -118,7 +118,8 @@
     },
     "rental": {
         "title": "Rental Agreement",
-        "text1": "<strong>RENTAL DURATION</strong><br> The rental is granted until the end of the course or for a period of _ _ _ _ days.",
+        "days": "days",
+        "text1": "<strong>RENTAL DURATION</strong><br> The rental is granted until the end of the course or for a period of ",
         "text2": "<strong>RENTAL PRICES</strong><br> The rental amount for the period is calculated according to the One Two Dive price list. Please note that for some courses, the rental price is included in the package. The customer agrees to pay the full amount before the excursion or course begins.",
         "text3": "<strong>TERMS OF USE</strong><br> Modifying the equipment is strictly prohibited. The equipment is tested before being rented. The customer acknowledges all safety warnings, risks, and precautions to be taken with the rented equipment through this contract. The rented equipment may not be rented out, sold, transferred, or pledged by the customer. The customer is expected to be familiar with the operation and handling of the equipment and will be responsible for any misuse.",
         "text4": "<strong>RETURN</strong><br> The returned equipment will be tested by One Two Dive. Any defect, irregularity, or excessive wear related to the specified use observed during this inspection is the customer's responsibility. In case of loss or damage to the equipment due to incorrect, irresponsible, or inappropriate use by the customer, One Two Dive will charge the replacement cost.",

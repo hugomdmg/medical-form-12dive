@@ -118,7 +118,8 @@
   },
   "rental": {
     "title": "Mietvertrag",
-    "text1": "<strong>DAUER DER MIETE</strong><br> Die Miete gilt bis zum Ende des Kurses oder für einen Zeitraum von _ _ _ _ Tagen.",
+    "days": "Tage",
+    "text1": "<strong>MIETDAUER</strong><br> Die Miete wird bis zum Ende des Kurses oder für einen Zeitraum von ",
     "text2": "<strong>MIETPREISE</strong><br> Der Mietbetrag wird gemäß der Preisliste von One Two Dive berechnet. Bitte beachten Sie, dass bei einigen Kursen der Mietpreis im Paket enthalten ist. Der Kunde verpflichtet sich, den vollen Betrag vor Beginn des Ausflugs oder Kurses zu bezahlen.",
     "text3": "<strong>NUTZUNGSBEDINGUNGEN</strong><br> Es ist strengstens verboten, die Ausrüstung zu verändern. Die Ausrüstung wird vor der Vermietung getestet. Der Kunde bestätigt mit diesem Vertrag, über alle Sicherheitswarnungen, Risiken und Vorsichtsmaßnahmen informiert zu sein. Die gemietete Ausrüstung darf vom Kunden nicht weitervermietet, verkauft, übertragen oder verpfändet werden. Der Kunde muss mit der Funktionsweise der Ausrüstung vertraut sein und haftet für jede missbräuchliche Verwendung.",
     "text4": "<strong>RÜCKGABE</strong><br> Die zurückgegebene Ausrüstung wird von One Two Dive überprüft. Jede Beschädigung, Unregelmäßigkeit oder übermäßige Abnutzung im Vergleich zum bestimmungsgemäßen Gebrauch liegt in der Verantwortung des Kunden. Bei Verlust oder Beschädigung durch unsachgemäße oder fahrlässige Nutzung wird One Two Dive die Wiederbeschaffungskosten in Rechnung stellen.",

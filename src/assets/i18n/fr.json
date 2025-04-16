@@ -118,7 +118,8 @@
   },
   "rental": {
     "title": "Contrat de Location",
-    "text1": "<strong>DURÉE DE LA LOCATION</strong><br> La location est accordée jusqu'à la fin du cours ou pour une période de _ _ _ _ jours.",
+    "days": "jours",
+    "text1": "<strong>DURÉE DE LOCATION</strong><br> La location est accordée jusqu'à la fin du cours ou pour une période de ",
     "text2": "<strong>PRIX DE LOCATION</strong><br> Le montant de la location est calculé selon la liste de prix de One Two Dive. Veuillez noter que pour certains cours, le prix de la location est inclus dans le forfait. Le client s'engage à payer le montant total avant le début de l'excursion ou du cours.",
     "text3": "<strong>CONDITIONS D’UTILISATION</strong><br> Il est strictement interdit de modifier le matériel. Le matériel est testé avant sa location. Le client certifie avoir pris connaissance de tous les avertissements de sécurité, risques et précautions liés à l'utilisation du matériel loué. Le matériel ne peut être sous-loué, vendu, cédé ou mis en gage par le client. Le client est censé connaître le fonctionnement et la manipulation du matériel, et sera responsable de toute mauvaise utilisation.",
     "text4": "<strong>RESTITUTION</strong><br> Le matériel retourné sera testé par One Two Dive. Tout défaut, irrégularité ou usure excessive liée à une utilisation non conforme constaté lors de cette inspection sera à la charge du client. En cas de perte ou dommage dû à une mauvaise utilisation, One Two Dive facturera le prix de remplacement.",

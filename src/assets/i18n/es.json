@@ -118,7 +118,8 @@
     },
     "rental": {
         "title": "Contrato de Arrendamiento",
-        "text1": "<strong>DURACIÓN DEL ALQUILER</strong><br> El alquiler se otorga hasta el final del curso o por un período de _ _ _ _ días.",
+        "days": "días",
+        "text1": "<strong>DURACIÓN DEL ALQUILER</strong><br> El alquiler se otorga hasta el final del curso o por un período de",
         "text2": "<strong>PRECIOS DE ALQUILER</strong><br>  El monto del período de alquiler se calcula en la lista de precios de One Two Dive, tenga en cuenta que, para algunos cursos, el precio del alquiler está incluido en el paquete. El cliente se compromete a pagar el importe total antes del inicio de la excursión o curso.",
         "text3": "<strong>CONDICIONES DE USO</strong><br>  Está estrictamente prohibido modificar el equipo. El equipo se prueba antes de alquilarlo. El cliente certifica todas las advertencias de seguridad, riesgos y precauciones que deben tomarse con respecto al uso del equipo alquilado a través de este contrato. El equipo alquilado no puede ser alquilado, vendido, cedido o pignorado por el cliente. Se espera que el cliente conozca el funcionamiento y manejo del equipo, por lo que será responsable de cualquier mal uso.",
         "text4": "<strong>RESTITUCIÓN</strong><br>  El equipo devuelto será probado por One Two Dive. Cualquier defecto, irregularidad o desgaste excesivo en relación con el uso especificado, observado durante esta inspección, es responsabilidad del cliente. En caso de pérdida o daño del equipo que sucedió debido a un uso incorrecto, irresponsable o inapropiado por parte del cliente, One Two Dive cobrará a precio de costo. ",

@@ -6,7 +6,12 @@
 
 
 <div class="question-container">
-    <div *ngFor="let text of [1,2,3,4,5,6,7]">
+    <div id="input-text">
+        <p [innerHTML]="'rental.text1' | translate"></p>
+        <input type="text">
+        <p>{{'rental.days' | translate}}.</p>
+    </div>
+    <div *ngFor="let text of [2,3,4,5,6,7]">
         <p [innerHTML]="'rental.text'+text | translate"></p>
     </div>
 </div>
