@@ -18,7 +18,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { PersonalComponent } from './components/personal/personal.component';
 import { RentalComponent } from './rental/rental.component';
 import { SafeComponent } from './safe/safe.component';
-import { PdfMedicalComponent } from './pdf/medical/pdf-medical.component';
+import { PdfMedicalComponent } from './pdf/pdf-medical/pdf-medical.component';
+import { PdfRentalComponent } from './pdf/pdf-rental/pdf-rental.component';
 
 const routes: Routes = [
   { path: '', component: MedicalComponent },
@@ -44,7 +45,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     PersonalComponent,
     RentalComponent,
     SafeComponent,
-    PdfMedicalComponent
+    PdfMedicalComponent,
+    PdfRentalComponent
   ],
   imports: [
     BrowserModule,

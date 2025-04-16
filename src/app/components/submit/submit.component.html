@@ -10,4 +10,5 @@
     <button class="submit" (click)="generatePDFfromHTML()">{{'submit'|translate}}</button>
 </div>
 
-<app-pdf-medical [questions]="questions" [signature]="signature" [name]="name"></app-pdf-medical>
+<app-pdf-medical *ngIf="form == 'medical'" [questions]="questions" [signature]="signature" [name]="name"></app-pdf-medical>
+<app-pdf-rental *ngIf="form == 'rental'" [questions]="questions" [signature]="signature" [name]="name"></app-pdf-rental>

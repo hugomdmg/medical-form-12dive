@@ -8,12 +8,16 @@
 <div class="question-container">
     <div id="input-text">
         <p [innerHTML]="'rental.text1' | translate"></p>
-        <input type="text" [(ngModel)]="days">
+        <input type="text" (input)="updateAnswer($event)">
         <p>{{'rental.days' | translate}}.</p>
     </div>
     <div *ngFor="let text of [2,3,4,5,6,7]">
         <p [innerHTML]="'rental.text'+text | translate"></p>
     </div>
+    <div>
+        <p>Full name:</p>
+        <input type="text" (input)="updateName($event)">
+    </div>
 </div>
 
-<app-submit></app-submit>
+<app-submit [form]="'rental'" [questions]="questions"></app-submit>

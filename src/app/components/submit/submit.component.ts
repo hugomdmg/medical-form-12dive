@@ -10,6 +10,7 @@ import html2canvas from 'html2canvas';
   styleUrls: ['./submit.component.css']
 })
 export class SubmitComponent implements OnInit {
+  @Input() form!:string
   @Input() questions: any = undefined;
   signature: string | null = null;
   creating = false
