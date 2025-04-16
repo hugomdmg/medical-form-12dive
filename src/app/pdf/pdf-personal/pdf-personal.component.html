@@ -5,10 +5,7 @@
     </div>
 
     <div *ngFor="let question of questions" class="question">
-        <div class="main-input">
-            <p>{{'personal_data.'+question.name | translate}}:</p>
-            <p>{{question.answer}}</p>
-        </div>
+        <p><strong>{{'personal_data.'+question.name | translate}}: </strong>{{question.answer}}</p>
         <div class="options" *ngIf="question.options !=undefined">
             <div class="option" *ngFor="let option of question.options">
                 <input type="checkbox">
