@@ -18,6 +18,16 @@
     width: 60%;
 }
 
+.input-container {
+    display: flex;
+    height: 2rem;
+    align-items: center;
+}
+
+.input-container input {
+    width: 20rem;
+}
+
 
 @media (max-width: 768px) {
     .question-container {

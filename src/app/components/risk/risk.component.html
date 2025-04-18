@@ -7,9 +7,13 @@
 
 <div class="question-container">
     <p [innerHTML]="'risk.text1' | translate"></p>
-    <input type="text" (input)="updateName($event)">
+    <div class="input-container">
+        <p>{{'risk.I' | translate}}</p><input type="text" [(ngModel)]="name" (ngModelChange)="onNameChange()">
+    </div>
     <p [innerHTML]="'risk.text2' | translate"></p>
-    <input type="text" (input)="updateName($event)">
+    <div class="input-container">
+        <p>{{'risk.I' | translate}}</p><input type="text" [(ngModel)]="name" (ngModelChange)="onNameChange()">
+    </div>
     <p [innerHTML]="'risk.text3' | translate"></p>
 
 </div>

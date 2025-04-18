@@ -12,8 +12,8 @@ export class RiskComponent {
 
   constructor(private questionsService: QuestionsService) { }
 
-  updateName(event: Event) {
-    const name = (event.target as HTMLInputElement).value
-    this.questionsService.updateName(name)
+  onNameChange(){
+    this.questionsService.updateName(this.name)
   }
+
 }
