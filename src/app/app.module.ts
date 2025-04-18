@@ -22,12 +22,15 @@ import { PdfMedicalComponent } from './pdf/pdf-medical/pdf-medical.component';
 import { PdfRentalComponent } from './pdf/pdf-rental/pdf-rental.component';
 import { PdfSafeComponent } from './pdf/pdf-safe/pdf-safe.component';
 import { PdfPersonalComponent } from './pdf/pdf-personal/pdf-personal.component';
+import { RiskComponent } from './components/risk/risk.component';
+import { PdfRiskComponent } from './pdf/pdf-risk/pdf-risk.component';
 
 const routes: Routes = [
   { path: '', component: MedicalComponent },
   { path: 'personal', component: PersonalComponent },
   { path: 'rental', component: RentalComponent },
-  { path: 'safe', component: SafeComponent }
+  { path: 'safe', component: SafeComponent },
+  {path: 'risk', component: RiskComponent}
 
 ]
 
@@ -50,7 +53,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     PdfMedicalComponent,
     PdfRentalComponent,
     PdfSafeComponent,
-    PdfPersonalComponent
+    PdfPersonalComponent,
+    RiskComponent,
+    PdfRiskComponent
   ],
   imports: [
     BrowserModule,

@@ -3,16 +3,17 @@
         <img id="logo" src="../assets/img/12divelogo.jpeg" alt="">
     </div>
     <div id="links-container">
-        <a routerLink="/">Medical Form</a>
-        <a routerLink="/personal">Personal Data</a>
-        <a routerLink="/rental">Rental Agreement</a>
-        <a routerLink="/safe">Standard Safe Diving Practice</a>
+        <a routerLink="/">{{'links.medical' | translate}}</a>
+        <a routerLink="/personal">{{'links.personal' | translate}}</a>
+        <a routerLink="/rental">{{'links.rental' | translate}}</a>
+        <a routerLink="/safe">{{'links.standard' | translate}}</a>
+        <a routerLink="/risk">{{'links.risk' | translate}}</a>
     </div>
     <div id="languages-container">
         <button (click)="changeLanguage('en')"><img src="assets/img/en.png"></button>
         <button (click)="changeLanguage('es')"><img src="assets/img/es.png"></button>
         <button (click)="changeLanguage('fr')"><img src="assets/img/fr.png"></button>
         <button (click)="changeLanguage('ge')"><img src="assets/img/ge.png"></button>
-        <button (click)="changeLanguage('ch')"><img src="assets/img/ch.png"></button>
+        <!-- <button (click)="changeLanguage('ch')"><img src="assets/img/ch.png"></button> -->
     </div>
 </div>

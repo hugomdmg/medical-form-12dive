@@ -1,0 +1,22 @@
+<div id="pdf-content">
+    <div class="question-container">
+        <div id="title-container">
+            <h1>{{'risk.title' | translate}}</h1>
+        </div>
+    </div>
+
+
+    <div class="question-container">
+        <p [innerHTML]="'risk.text1' | translate"></p>
+        <p>{{name}}</p>
+        <p [innerHTML]="'risk.text2' | translate"></p>
+        <p>{{name}}</p>
+        <p [innerHTML]="'risk.text3' | translate"></p>
+
+    </div>
+    <div>
+        <p [innerHTML]="'final_text' | translate"></p>
+        <h3>{{'signed' | translate}}: {{name}}, {{date}}</h3>
+        <img [src]="signature" alt="sign">
+    </div>
+</div>

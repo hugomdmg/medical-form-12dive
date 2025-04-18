@@ -1,0 +1,17 @@
+<div class="question-container">
+    <div id="title-container">
+        <h1>{{'risk.title' | translate}}</h1>
+    </div>
+</div>
+
+
+<div class="question-container">
+    <p [innerHTML]="'risk.text1' | translate"></p>
+    <input type="text" (input)="updateName($event)">
+    <p [innerHTML]="'risk.text2' | translate"></p>
+    <input type="text" (input)="updateName($event)">
+    <p [innerHTML]="'risk.text3' | translate"></p>
+
+</div>
+
+<app-submit [form]="'risk'" [questions]="questions"></app-submit>
