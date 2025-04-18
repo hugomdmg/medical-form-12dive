@@ -50,7 +50,7 @@ export default [
     {
         name: "gender",
         type: "option",
-        mandatory: true,
+        mandatory: false,
         options: [
             {
                 name: "male",
@@ -69,7 +69,7 @@ export default [
     {
         name: "certificationLevel",
         type: "option",
-        mandatory: true,
+        mandatory: false,
         options: [
             {
                 name: "certificationOptions.scubaDiver",

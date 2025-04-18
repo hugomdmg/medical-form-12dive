@@ -25,7 +25,6 @@ export class PersonalComponent {
     }else{
       this.questionsService.updatePersonalQuestions(name, event)
     }
-    console.log(this.questions)
   }
 
 }

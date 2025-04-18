@@ -10,7 +10,7 @@ import html2canvas from 'html2canvas';
   styleUrls: ['./submit.component.css']
 })
 export class SubmitComponent implements OnInit {
-  @Input() form!:string
+  @Input() form!: string
   @Input() questions: any = undefined;
   signature: string | null = null;
   creating = false
@@ -64,10 +64,22 @@ export class SubmitComponent implements OnInit {
 
 
   checkComplet(): boolean {
-    if (this.form == 'personal') return true
     this.show_alert = false;
     this.show_alert_name = false;
     this.show_alert_signature = false;
+
+    if (this.form == 'personal') {
+      const unanswered = this.questions.some((q: any) => 
+        (q.answer === undefined || q.answer === "") && q.mandatory
+      );
+      
+      if (unanswered) {
+        this.show_alert = true;
+      }
+      
+      return !unanswered;
+      
+    }
 
     const unanswered = this.questions.some((q: any) => q.answer === undefined);
     if (unanswered) {
@@ -81,7 +93,7 @@ export class SubmitComponent implements OnInit {
     if (!this.signature) {
       this.show_alert_signature = true;
     }
-   // return true
+    // return true
     return !(this.show_alert || this.show_alert_name || this.show_alert_signature);
   }
 
