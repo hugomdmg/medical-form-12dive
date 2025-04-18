@@ -11,7 +11,7 @@
         </div>
     </div>
     <div *ngIf="answer_yes">
-        <p *ngIf="questions">{{ 'i_have' | translate }}</p>
+        <p *ngIf="questions && questions_group != 'personal'">{{ 'i_have' | translate }}</p>
         <div *ngFor="let question of questions">
             <app-subquestion [question_text]="question.name" (eventEmitter)="updateSubanswer($event)"></app-subquestion>
         </div>

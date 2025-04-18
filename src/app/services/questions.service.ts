@@ -31,13 +31,20 @@ export class QuestionsService {
   private update(name:string, answer:string | boolean, questionsSource:any){
     const current = questionsSource.value;
 
-    current.forEach((question: { name: string; answer: string | boolean; options: any[]; }) => {
+    current.forEach((question: { name: string; answer: string | boolean; options: any[]; subquestions:any[]}) => {
       if (question.name == name) {
         question.answer = answer
       }
       else {
         if (question.options) {
           question.options.forEach((element: any) => {
+            if (element.name == name) {
+              element.answer = answer
+            }
+          });
+        }
+        if(question.subquestions){
+          question.subquestions.forEach((element: any) => {
             if (element.name == name) {
               element.answer = answer
             }

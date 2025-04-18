@@ -1,38 +1,56 @@
 export default [
     {
         name: "email",
+        type: "input",
+        mandatory: true,
         answer: ""
     },
     {
         name: "name",
+        type: "input",
+        mandatory: true,
         answer: ""
     },
     {
         name: "last_name",
+        type: "input",
+        mandatory: true,
         answer: ""
     },
     {
         name: "street",
+        type: "input",
+        mandatory: true,
         answer: ""
     },
     {
         name: "postal",
+        type: "input",
+        mandatory: true,
         answer: ""
     },
     {
         name: "country",
+        type: "input",
+        mandatory: true,
         answer: ""
     },
     {
         name: "city",
+        type: "input",
+        mandatory: true,
         answer: ""
     },
     {
         name: "phone",
+        type: "input",
+        mandatory: true,
         answer: ""
     },
     {
         name: "gender",
+        type: "option",
+        mandatory: true,
         options: [
             {
                 name: "male",
@@ -50,6 +68,8 @@ export default [
     },
     {
         name: "certificationLevel",
+        type: "option",
+        mandatory: true,
         options: [
             {
                 name: "certificationOptions.scubaDiver",
@@ -83,124 +103,98 @@ export default [
     },
     {
         name: "numberOfDives",
+        type: "input",
+        mandatory: true,
         answer: ""
     },
     {
         name: "dateOfLastDive",
+        type: "input",
+        mandatory: true,
         answer: ""
     },
     {
         name: "needRefresher",
-        options: [
-            {
-                name: "yes1",
-                answer: ""
-            },
-            {
-                name: "no1",
-                answer: ""
-            },
-        ]
+        type: "yes-no",
+        mandatory: true,
+        answer: undefined
     },
     {
         name: "haveInsurance",
-        options: [
+        type: "yes-no",
+        mandatory: true,
+        answer: undefined,
+        subquestions: [
             {
-                name: "yes2",
+                name: "insuranceNumber",
                 answer: ""
             },
             {
-                name: "no2",
+                name: "insuranceCompany",
                 answer: ""
-            },
+            }
         ]
-    },
-    {
-        name: "insuranceNumber",
-        answer: ""
-    },
-    {
-        name: "insuranceCompany",
-        answer: ""
     },
     {
         name: "needEquipment",
-        options: [
+        type: "yes-no",
+        mandatory: true,
+        answer: undefined,
+        subquestions: [
             {
-                name: "yes3",
+                name: "bootsSize",
                 answer: ""
             },
             {
-                name: "no3",
+                name: "bcdSize",
                 answer: ""
             },
+            {
+                name: "wetsuitSize",
+                answer: ""
+            }
         ]
-    },
-    {
-        name: "bootsSize",
-        answer: ""
-    },
-    {
-        name: "bcdSize",
-        answer: ""
-    },
-    {
-        name: "wetsuitSize",
-        answer: ""
     },
     {
         name: "wantPhotosVideos",
-        options: [
-            {
-                name: "yes4",
-                answer: ""
-            },
-            {
-                name: "no4",
-                answer: ""
-            },
-        ]
+        type: "yes-no",
+        mandatory: false,
+        answer: undefined
     },
     {
         name: "preferredDiveDate",
+        type: "input",
+        mandatory: false,
         answer: ""
     },
     {
         name: "stayDuration",
+        type: "input",
+        mandatory: false,
         answer: ""
     },
     {
         name: "departureDate",
+        type: "input",
+        mandatory: false,
         answer: ""
     },
     {
         name: "promotionsEmail",
-        options: [
-            {
-                name: "yes5",
-                answer: ""
-            },
-            {
-                name: "no5",
-                answer: ""
-            },
-        ]
+        type: "yes-no",
+        mandatory: false,
+        answer: undefined
     },
     {
         name: "consentSocialMedia",
-        options: [
-            {
-                name: "yes6",
-                answer: ""
-            },
-            {
-                name: "no6",
-                answer: ""
-            },
-        ]
+        type: "yes-no",
+        mandatory: true,
+        answer: undefined
     },
     {
         name: "howDidYouKnow",
+        type: "option",
+        mandatory: false,
         options: [
             {
                 name: "referralOptions.website",

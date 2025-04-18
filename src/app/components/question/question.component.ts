@@ -10,6 +10,7 @@ import { QuestionsService } from 'src/app/services/questions.service';
 export class QuestionComponent implements OnInit {
 
 
+  @Input() questions_group = "questions"
   @Input() question_text: string = ""
   @Output() eventEmitter = new EventEmitter()
   questions: any[] = []

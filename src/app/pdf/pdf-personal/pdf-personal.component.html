@@ -1,16 +1,38 @@
 <div id="pdf-content">
     <h1>{{'personal_data.title' | translate}}</h1>
-
     <div *ngFor="let question of questions" class="question">
-        <p><strong>{{'personal_data.'+question.name | translate}}: </strong>{{question.answer}}</p>
-        <div class="options" *ngIf="question.options !=undefined">
+
+        <div>
+            <p><strong>{{'personal_data.'+question.name | translate}}:</strong></p>
+        </div>
+        <div class="main-input" *ngIf="question.type == 'input'">
+            <p>{{question.answer}}</p>
+        </div>
+
+
+        <div class="options" *ngIf="question.type == 'option'">
             <div class="option" *ngFor="let option of question.options">
-                <input *ngIf="option.answer != 'on'" type="checkbox">
-                <input *ngIf="option.answer == 'on'" type="checkbox" checked>
-                <p *ngIf="!option.name.includes('yes') && !option.name.includes('no')">{{'personal_data.'+option.name |
-                    translate}}</p>
-                <p *ngIf="option.name.includes('yes')">{{'yes' | translate}}</p>
-                <p *ngIf="option.name.includes('no')">{{'no' | translate}}</p>
+                <input type="checkbox" *ngIf="!option.answer">
+                <input type="checkbox" checked *ngIf="option.answer">
+                <p>{{'personal_data.'+option.name | translate}}</p>
+            </div>
+        </div>
+        <div *ngIf="question.type == 'yes-no'">
+            <div class="option" *ngIf="question.answer">
+                <input type="checkbox" checked><p>yes</p>
+                <input type="checkbox"><p>no</p>
+            </div>
+            <div class="option" *ngIf="question.answer === false">
+                <input type="checkbox"><p>yes</p>
+                <input type="checkbox" checked><p>no</p>
+            </div>
+            <div class="option" *ngIf="question.answer === undefined">
+                <input type="checkbox"><p>yes</p>
+                <input type="checkbox"><p>no</p>
+            </div>
+            <div *ngFor="let subquestion of question.subquestions">
+                <p>{{'personal_data.'+subquestion.name | translate}}:</p>
+                <p>{{subquestion.answer}}</p>
             </div>
         </div>
     </div>

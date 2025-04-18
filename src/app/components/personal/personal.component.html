@@ -2,20 +2,32 @@
     <div id="title-container">
         <h1>{{'personal_data.title' | translate}}</h1>
     </div>
-    <p id="formater">. . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </p>
+    <p id="formater">. . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </p>
 </div>
 
 <div *ngFor="let question of questions" class="question">
-    <div class="main-input">
+
+    <div>
         <p>{{'personal_data.'+question.name | translate}}:</p>
+    </div>
+    <div class="main-input" *ngIf="question.type == 'input'">
         <input *ngIf="question.answer != undefined" type="text" (input)="updateAnswer(question.name, $event)">
     </div>
-    <div class="options" *ngIf="question.options !=undefined">
+
+
+    <div class="options" *ngIf="question.type == 'option'">
         <div class="option" *ngFor="let option of question.options">
             <input type="checkbox" (input)="updateAnswer(option.name, $event)">
-            <p *ngIf="!option.name.includes('yes') && !option.name.includes('no')">{{'personal_data.'+option.name | translate}}</p>
-            <p *ngIf="option.name.includes('yes')">{{'yes' | translate}}</p>
-            <p *ngIf="option.name.includes('no')">{{'no' | translate}}</p>
+            <p>{{'personal_data.'+option.name | translate}}</p>
+        </div>
+    </div>
+    <app-question *ngIf="question.type == 'yes-no'" [questions_group]="'personal'" (eventEmitter)="updateAnswer(question.name, $event)"></app-question>
+    <div *ngIf="question.type == 'yes-no' && question.answer">
+        <div *ngFor="let subquestion of question.subquestions">
+            <p>{{'personal_data.'+subquestion.name | translate}}:</p>
+            <input type="text" (input)="updateAnswer(subquestion.name, $event)">
         </div>
     </div>
 </div>

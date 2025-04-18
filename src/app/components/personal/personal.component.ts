@@ -18,8 +18,14 @@ export class PersonalComponent {
     })
   }
 
-  updateAnswer(name: any, event:Event) {
-    this.questionsService.updatePersonalQuestions(name, (event.target as HTMLInputElement).value)
+  updateAnswer(name: any, event: Event | string) {
+    if(event instanceof Event){
+      this.questionsService.updatePersonalQuestions(name, (event.target as HTMLInputElement).value)
+
+    }else{
+      this.questionsService.updatePersonalQuestions(name, event)
+    }
+    console.log(this.questions)
   }
 
 }
