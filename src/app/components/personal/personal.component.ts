@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { QuestionsService } from 'src/app/services/questions.service';
-import questions from '../../../assets/personal_questions'
 
 @Component({
   selector: 'app-personal',
@@ -14,8 +13,13 @@ export class PersonalComponent {
 
   ngOnInit(): void {
     this.questionsService.personal_questions$.subscribe(questions => {
-      if (questions) { this.questions = questions }
+      this.questions = questions
     })
+  }
+
+  updateName(event: Event) {
+    const name = (event.target as HTMLInputElement).value
+    this.questionsService.updateName(name)
   }
 
   updateAnswer(name: any, event: Event | string) {
@@ -24,6 +28,9 @@ export class PersonalComponent {
 
     }else{
       this.questionsService.updatePersonalQuestions(name, event)
+    }
+    if(name == "name" && event instanceof Event){
+      this.updateName(event)
     }
   }
 

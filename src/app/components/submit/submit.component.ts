@@ -69,6 +69,7 @@ export class SubmitComponent implements OnInit {
     this.show_alert = false;
     this.show_alert_name = false;
     this.show_alert_signature = false;
+    // return true
 
     if (this.form == 'personal') {
       const unanswered = this.questions.some((q: any) =>
@@ -95,7 +96,6 @@ export class SubmitComponent implements OnInit {
     if (!this.signature) {
       this.show_alert_signature = true;
     }
-    // return true
     return !(this.show_alert || this.show_alert_name || this.show_alert_signature);
   }
 
