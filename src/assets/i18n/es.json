@@ -62,6 +62,7 @@
         "email": "Correo electrónico",
         "name": "Nombre",
         "last_name": "Apellido",
+        "birthday": "Fecha de nacimiento",
         "street": "Calle",
         "postal": "Código postal",
         "country": "País de residencia",

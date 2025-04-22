@@ -18,6 +18,12 @@ export default [
         answer: ""
     },
     {
+        name: "birthday",
+        type: "input",
+        mandatory: true,
+        answer: ""
+    },
+    {
         name: "street",
         type: "input",
         mandatory: true,
