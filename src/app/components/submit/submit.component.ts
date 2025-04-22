@@ -18,6 +18,8 @@ export class SubmitComponent implements OnInit {
   show_alert = false
   show_alert_name = false
   show_alert_signature = false
+  data = new Date()
+  date = `${this.data.getDate().toString().padStart(2, '0')} / ${this.data.getMonth().toString().padStart(2, '0')} / ${this.data.getFullYear()}`
 
   constructor(private questionsService: QuestionsService) { }
 
@@ -57,7 +59,7 @@ export class SubmitComponent implements OnInit {
         y += pdfH;
         if (y < imgH) pdf.addPage();
       }
-      pdf.save(`${this.form}_form_${this.name}.pdf`);
+      pdf.save(`${this.form}_form_${this.date}_${this.name}.pdf`);
     };
     this.creating = false
   }
@@ -69,16 +71,16 @@ export class SubmitComponent implements OnInit {
     this.show_alert_signature = false;
 
     if (this.form == 'personal') {
-      const unanswered = this.questions.some((q: any) => 
+      const unanswered = this.questions.some((q: any) =>
         (q.answer === undefined || q.answer === "") && q.mandatory
       );
-      
+
       if (unanswered) {
         this.show_alert = true;
       }
-      
+
       return !unanswered;
-      
+
     }
 
     const unanswered = this.questions.some((q: any) => q.answer === undefined);
