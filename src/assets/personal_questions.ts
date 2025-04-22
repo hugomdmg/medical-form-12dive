@@ -108,6 +108,12 @@ export default [
         ]
     },
     {
+        name: "padi_number",
+        type: "input",
+        mandatory: false,
+        answer: ""
+    },
+    {
         name: "numberOfDives",
         type: "input",
         mandatory: true,

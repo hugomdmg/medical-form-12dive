@@ -82,6 +82,7 @@
             "diverMasterInstructor": "Dive Master / Instructor",
             "notCertified": "No certificado"
         },
+        "padi_number": "Número PADI (si está certificado)",
         "numberOfDives": "Número de inmersiones",
         "dateOfLastDive": "Fecha de la última inmersión",
         "dateFormat": "Mes, día, año",

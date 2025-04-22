@@ -82,6 +82,7 @@
       "diverMasterInstructor": "Divemaster / Instructeur",
       "notCertified": "Non certifié"
     },
+    "padi_number": "Numéro PADI (si certifié)",
     "numberOfDives": "Nombre de plongées",
     "dateOfLastDive": "Date de la dernière plongée",
     "dateFormat": "Mois, jour, année",
@@ -137,11 +138,10 @@
     "text3": "PAR LE PRÉSENT ACTE, ACCEPTE D’EXONÉRER ET DE DÉGAGER DE TOUTE RESPONSABILITÉ MES INSTRUCTEURS, <strong>le personnel de One Two Dive</strong>, L’ÉTABLISSEMENT QUI FOURNIT MA FORMATION, <strong>One Two Dive</strong>, AINSI QUE PADI AMERICAS, INC., ET TOUTES LES ENTITÉS AFFILIÉES TELLES QUE DÉFINIES CI-DESSUS, DE TOUTE RESPONSABILITÉ POUR DOMMAGES CORPORELS, MATÉRIELS OU POUR DÉCÈS, QUELLE QU’EN SOIT LA CAUSE, Y COMPRIS MAIS SANS S’Y LIMITER, LA NÉGLIGENCE DES PARTIES DÉCHARGÉES, QU’ELLE SOIT ACTIVE OU PASSIVE.<br><br><strong>JE M’INFORME ENTIÈREMENT, AINSI QUE MES HÉRITIERS, DU CONTENU DE CETTE DIVULGATION DE NON-AGENCE ET DE CETTE EXONÉRATION DE RESPONSABILITÉ ET ACCORD D’ASSOMPTION DE RISQUES EN LE LISANT AVANT DE SIGNER</strong><br><br>CI-DESSOUS POUR MOI-MÊME ET MES HÉRITIERS."
   },
   "links": {
-  "medical": "Formulaire Médical",
-  "personal": "Données Personnelles",
-  "rental": "Contrat de Location",
-  "standard": "Règles de Plongée Sécuritaire",
-  "risk": "Acceptation des Risques"
-}
-
+    "medical": "Formulaire Médical",
+    "personal": "Données Personnelles",
+    "rental": "Contrat de Location",
+    "standard": "Règles de Plongée Sécuritaire",
+    "risk": "Acceptation des Risques"
+  }
 }

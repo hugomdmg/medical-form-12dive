@@ -82,6 +82,7 @@
       "diverMasterInstructor": "Divemaster / Tauchlehrer",
       "notCertified": "Nicht zertifiziert"
     },
+    "padi_number": "PADI-Nummer (wenn zertifiziert)",
     "numberOfDives": "Anzahl der Tauchgänge",
     "dateOfLastDive": "Datum des letzten Tauchgangs",
     "dateFormat": "Monat, Tag, Jahr",
