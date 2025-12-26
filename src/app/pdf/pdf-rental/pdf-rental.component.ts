@@ -10,5 +10,5 @@ export class PdfRentalComponent {
   @Input() signature: string | null = null;
   @Input() name = ""
   data = new Date()
-  date = `${this.data.getDate().toString().padStart(2, '0')} / ${this.data.getMonth().toString().padStart(2, '0')} / ${this.data.getFullYear()}`
+  date = `${this.data.getDate().toString().padStart(2, '0')} / ${(this.data.getMonth() + 1).toString().padStart(2, '0')} / ${this.data.getFullYear()}`;
 }
